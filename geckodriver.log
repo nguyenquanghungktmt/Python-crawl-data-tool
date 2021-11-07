@@ -1,0 +1,139 @@
+1636253988757	geckodriver	INFO	Listening on 127.0.0.1:51322
+1636253990778	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51323" "-no-remote" "-profile" "C:\\Users\\HUNG~1.NQ1\\AppData\\Local\\Temp\\rust_mozprofiledvq82K"
+1636253991668	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HUNG.NQ183760\\AppData\\Local\\Temp\\rust_mozprofiledvq82K\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51323/devtools/browser/8c0b9f4f-e137-46b5-b6df-2960ee0c6b48
+1636253996311	Marionette	INFO	Listening on port 51331
+1636253996435	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1636254045226	Marionette	INFO	Stopped listening on port 51331
+JavaScript error: https://banggia.hnx.vn/Scripts/PriceHNX.js?v=3.7, line 577: NS_ERROR_NOT_INITIALIZED: 
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x390145,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1636254260164	geckodriver	INFO	Listening on 127.0.0.1:51620
+1636254262199	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51621" "-no-remote" "-profile" "C:\\Users\\HUNG~1.NQ1\\AppData\\Local\\Temp\\rust_mozprofilelzgVAV"
+1636254263133	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HUNG.NQ183760\\AppData\\Local\\Temp\\rust_mozprofilelzgVAV\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51621/devtools/browser/152cbcf2-eeee-4a6e-a7c4-4860046205c0
+1636254268333	Marionette	INFO	Listening on port 51626
+1636254268784	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1636254273257	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:238:19
+TimedPromise@chrome://remote/content/marionette/sync.js:223:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1636254279734	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:238:19
+TimedPromise@chrome://remote/content/marionette/sync.js:223:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+1636254286012	Marionette	INFO	Stopped listening on port 51626
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
+JavaScript error: https://banggia.hnx.vn/Scripts/PriceHNX.js?v=3.7, line 577: NS_ERROR_NOT_INITIALIZED: 
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x230030,name=PBrowser::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+Marionette threw an error: TypeError: browsingContext.currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://remote/content/marionette/actors/MarionetteCommandsParent.jsm:326:29
+observe@resource://gre/modules/AsyncShutdown.jsm:575:16
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+JavaScript error: chrome://remote/content/marionette/driver.js, line 2103: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1636254308887	geckodriver	INFO	Listening on 127.0.0.1:51687
+1636254310912	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51688" "-no-remote" "-profile" "C:\\Users\\HUNG~1.NQ1\\AppData\\Local\\Temp\\rust_mozprofileLC7xWN"
+1636254311640	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HUNG.NQ183760\\AppData\\Local\\Temp\\rust_mozprofileLC7xWN\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51688/devtools/browser/5d35821a-260f-4814-ad65-60ca5b91b5a8
+1636254316262	Marionette	INFO	Listening on port 51693
+1636254316386	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1636254375520	Marionette	INFO	Stopped listening on port 51693
+JavaScript error: https://banggia.hnx.vn/Scripts/PriceHNX.js?v=3.7, line 577: NS_ERROR_NOT_INITIALIZED: 
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x390145,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x230030,name=PBrowser::Msg___delete__) Channel closing: too late to send/recv, messages will be lost
+
+1636256733514	geckodriver	INFO	Listening on 127.0.0.1:56455
+1636256735531	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "56456" "-no-remote" "-profile" "C:\\Users\\HUNG~1.NQ1\\AppData\\Local\\Temp\\rust_mozprofilepIEmy0"
+1636256736260	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HUNG.NQ183760\\AppData\\Local\\Temp\\rust_mozprofilepIEmy0\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56456/devtools/browser/c19e191d-a769-40b1-8afc-012871ada47a
+1636256740961	Marionette	INFO	Listening on port 56461
+1636256741105	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1636256787436	Marionette	INFO	Stopped listening on port 56461
+JavaScript error: https://banggia.hnx.vn/Scripts/PriceHNX.js?v=3.7, line 577: NS_ERROR_NOT_INITIALIZED: 
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x590008,name=PHttpChannel::Msg_DeletingChannel) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x390145,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1636257092309	geckodriver	INFO	Listening on 127.0.0.1:64932
+1636257094336	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "64933" "-no-remote" "-profile" "C:\\Users\\HUNG~1.NQ1\\AppData\\Local\\Temp\\rust_mozprofileeO2Pap"
+1636257095070	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HUNG.NQ183760\\AppData\\Local\\Temp\\rust_mozprofileeO2Pap\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:64933/devtools/browser/4d51240b-bbfe-4156-90f4-c708de181db8
+1636257099895	Marionette	INFO	Listening on port 64938
+1636257100027	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1636257144196	Marionette	INFO	Stopped listening on port 64938
+JavaScript error: https://banggia.hnx.vn/Scripts/PriceHNX.js?v=3.7, line 577: NS_ERROR_NOT_INITIALIZED: 
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x390145,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1636257238327	geckodriver	INFO	Listening on 127.0.0.1:65011
+1636257240359	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "65012" "-no-remote" "-profile" "C:\\Users\\HUNG~1.NQ1\\AppData\\Local\\Temp\\rust_mozprofilesqBQb4"
+1636257241416	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HUNG.NQ183760\\AppData\\Local\\Temp\\rust_mozprofilesqBQb4\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:65012/devtools/browser/387f982c-1dee-492f-97c1-69d1578d515f
+1636257247144	Marionette	INFO	Listening on port 65017
+1636257247693	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1636257293793	Marionette	INFO	Stopped listening on port 65017
+JavaScript error: https://banggia.hnx.vn/Scripts/PriceHNX.js?v=3.7, line 577: NS_ERROR_NOT_INITIALIZED: 
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x39007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x390145,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

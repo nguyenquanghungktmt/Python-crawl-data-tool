@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module selenium-crawl-hnx</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>selenium-crawl-hnx</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:d%3A%5Ch%E1%BB%8Dc%20li%E1%BB%87u%5C20211%5Cproject%203%5Cpython-crawl-data-tool%5Cselenium-crawl-hnx.py">d:\học liệu\20211\project 3\python-crawl-data-tool\selenium-crawl-hnx.py</a></font></td></tr></table>
+    <p><tt>Created&nbsp;on&nbsp;Oct&nbsp;23,&nbsp;2021<br>
+&nbsp;<br>
+@author:&nbsp;Nguyen&nbsp;Quang&nbsp;Hung</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="json.html">json</a><br>
+</td><td width="25%" valign=top><a href="pandas.html">pandas</a><br>
+</td><td width="25%" valign=top><a href="selenium.webdriver.html">selenium.webdriver</a><br>
+</td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-crawl_stock_data"><strong>crawl_stock_data</strong></a>(section)</dt><dd><tt>This&nbsp;function&nbsp;takes&nbsp;as&nbsp;an&nbsp;input&nbsp;parameter&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;stock&nbsp;item,&nbsp;and&nbsp;crawls&nbsp;the&nbsp;data&nbsp;of&nbsp;stock&nbsp;codes&nbsp;and&nbsp;prices.&nbsp;<br>
+Then&nbsp;put&nbsp;the&nbsp;data&nbsp;into&nbsp;the&nbsp;stock_list&nbsp;array<br>
+&nbsp;<br>
+Parameters:<br>
+section&nbsp;(int):&nbsp;Describe&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;stock&nbsp;section&nbsp;like&nbsp;ABC,&nbsp;DEF,&nbsp;GHI,&nbsp;...<br>
+&nbsp;<br>
+Returns:<br>
+this&nbsp;function&nbsp;doesn't&nbsp;return&nbsp;anything</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>df</strong> =     stock-code reference-price celling-price flo....0     10.8          10.9
+
+[343 rows x 7 columns]<br>
+<strong>driver</strong> = &lt;selenium.webdriver.firefox.webdriver.WebDriver (session="0b2409f9-c47c-45cb-a59a-91ce1486df55")&gt;<br>
+<strong>fw</strong> = &lt;_io.TextIOWrapper name='stock-hnx-json.json' mode='w' encoding='cp1252'&gt;<br>
+<strong>stock_dict</strong> = {'stocks': [{'average-price': '26.9', 'celling-price': '29.7', 'floor-price': '24.3', 'max-price': '27.5', 'min-rice': '26.6', 'reference-price': '27.0', 'stock-code': 'AAV'}, {'average-price': '3.4', 'celling-price': '3.9', 'floor-price': '3.3', 'max-price': '3.6', 'min-rice': '3.3', 'reference-price': '3.6', 'stock-code': 'ACM'}, {'average-price': '', 'celling-price': '27.8', 'floor-price': '22.8', 'max-price': '', 'min-rice': '', 'reference-price': '25.3', 'stock-code': 'ADC'}, {'average-price': '16.2', 'celling-price': '16.2', 'floor-price': '13.4', 'max-price': '16.2', 'min-rice': '16.2', 'reference-price': '14.8', 'stock-code': 'ALT'}, {'average-price': '25.8', 'celling-price': '28.3', 'floor-price': '23.3', 'max-price': '25.8', 'min-rice': '25.8', 'reference-price': '25.8', 'stock-code': 'AMC'}, {'average-price': '10.6', 'celling-price': '12.5', 'floor-price': '10.3', 'max-price': '11.3', 'min-rice': '10.3', 'reference-price': '11.4', 'stock-code': 'AME'}, {'average-price': '11.4', 'celling-price': '12.3', 'floor-price': '10.1', 'max-price': '11.7', 'min-rice': '11.1', 'reference-price': '11.2', 'stock-code': 'AMV'}, {'average-price': '100.0', 'celling-price': '100.4', 'floor-price': '82.2', 'max-price': '100.4', 'min-rice': '95.0', 'reference-price': '91.3', 'stock-code': 'API'}, {'average-price': '12.1', 'celling-price': '13.5', 'floor-price': '11.1', 'max-price': '12.3', 'min-rice': '12.1', 'reference-price': '12.3', 'stock-code': 'APP'}, {'average-price': '44.4', 'celling-price': '46.0', 'floor-price': '37.8', 'max-price': '45.8', 'min-rice': '42.5', 'reference-price': '41.9', 'stock-code': 'APS'}, {'average-price': '45.0', 'celling-price': '49.6', 'floor-price': '40.6', 'max-price': '45.0', 'min-rice': '45.0', 'reference-price': '45.1', 'stock-code': 'ARM'}, {'average-price': '10.7', 'celling-price': '11.4', 'floor-price': '9.4', 'max-price': '11.1', 'min-rice': '10.3', 'reference-price': '10.4', 'stock-code': 'ART'}, {'average-price': '', 'celling-price': '36.9', 'floor-price': '30.3', 'max-price': '', 'min-rice': '', 'reference-price': '33.6', 'stock-code': 'ATS'}, {'average-price': '22.7', 'celling-price': '25.0', 'floor-price': '20.6', 'max-price': '23.0', 'min-rice': '22.5', 'reference-price': '22.8', 'stock-code': 'BAB'}, {'average-price': '72.7', 'celling-price': '80.3', 'floor-price': '65.7', 'max-price': '73.2', 'min-rice': '72.0', 'reference-price': '73.0', 'stock-code': 'BAX'}, {'average-price': '12.0', 'celling-price': '13.2', 'floor-price': '10.8', 'max-price': '12.0', 'min-rice': '12.0', 'reference-price': '12.0', 'stock-code': 'BBS'}, {'average-price': '24.5', 'celling-price': '26.9', 'floor-price': '22.1', 'max-price': '25.4', 'min-rice': '23.8', 'reference-price': '24.5', 'stock-code': 'BCC'}, {'average-price': '39.2', 'celling-price': '43.4', 'floor-price': '35.6', 'max-price': '39.5', 'min-rice': '39.0', 'reference-price': '39.5', 'stock-code': 'BCF'}, {'average-price': '14.7', 'celling-price': '17.9', 'floor-price': '14.7', 'max-price': '14.7', 'min-rice': '14.7', 'reference-price': '16.3', 'stock-code': 'BDB'}, {'average-price': '', 'celling-price': '50.6', 'floor-price': '41.4', 'max-price': '', 'min-rice': '', 'reference-price': '46.0', 'stock-code': 'BED'}, ...]}<br>
+<strong>stock_json</strong> = '{<font color="#c040c0">\n</font>    "stocks": [<font color="#c040c0">\n</font>        {<font color="#c040c0">\n</font>            "stock-c...        "average-price": "10.9"<font color="#c040c0">\n</font>        }<font color="#c040c0">\n</font>    ]<font color="#c040c0">\n</font>}'<br>
+<strong>stock_list</strong> = [{'average-price': '26.9', 'celling-price': '29.7', 'floor-price': '24.3', 'max-price': '27.5', 'min-rice': '26.6', 'reference-price': '27.0', 'stock-code': 'AAV'}, {'average-price': '3.4', 'celling-price': '3.9', 'floor-price': '3.3', 'max-price': '3.6', 'min-rice': '3.3', 'reference-price': '3.6', 'stock-code': 'ACM'}, {'average-price': '', 'celling-price': '27.8', 'floor-price': '22.8', 'max-price': '', 'min-rice': '', 'reference-price': '25.3', 'stock-code': 'ADC'}, {'average-price': '16.2', 'celling-price': '16.2', 'floor-price': '13.4', 'max-price': '16.2', 'min-rice': '16.2', 'reference-price': '14.8', 'stock-code': 'ALT'}, {'average-price': '25.8', 'celling-price': '28.3', 'floor-price': '23.3', 'max-price': '25.8', 'min-rice': '25.8', 'reference-price': '25.8', 'stock-code': 'AMC'}, {'average-price': '10.6', 'celling-price': '12.5', 'floor-price': '10.3', 'max-price': '11.3', 'min-rice': '10.3', 'reference-price': '11.4', 'stock-code': 'AME'}, {'average-price': '11.4', 'celling-price': '12.3', 'floor-price': '10.1', 'max-price': '11.7', 'min-rice': '11.1', 'reference-price': '11.2', 'stock-code': 'AMV'}, {'average-price': '100.0', 'celling-price': '100.4', 'floor-price': '82.2', 'max-price': '100.4', 'min-rice': '95.0', 'reference-price': '91.3', 'stock-code': 'API'}, {'average-price': '12.1', 'celling-price': '13.5', 'floor-price': '11.1', 'max-price': '12.3', 'min-rice': '12.1', 'reference-price': '12.3', 'stock-code': 'APP'}, {'average-price': '44.4', 'celling-price': '46.0', 'floor-price': '37.8', 'max-price': '45.8', 'min-rice': '42.5', 'reference-price': '41.9', 'stock-code': 'APS'}, {'average-price': '45.0', 'celling-price': '49.6', 'floor-price': '40.6', 'max-price': '45.0', 'min-rice': '45.0', 'reference-price': '45.1', 'stock-code': 'ARM'}, {'average-price': '10.7', 'celling-price': '11.4', 'floor-price': '9.4', 'max-price': '11.1', 'min-rice': '10.3', 'reference-price': '10.4', 'stock-code': 'ART'}, {'average-price': '', 'celling-price': '36.9', 'floor-price': '30.3', 'max-price': '', 'min-rice': '', 'reference-price': '33.6', 'stock-code': 'ATS'}, {'average-price': '22.7', 'celling-price': '25.0', 'floor-price': '20.6', 'max-price': '23.0', 'min-rice': '22.5', 'reference-price': '22.8', 'stock-code': 'BAB'}, {'average-price': '72.7', 'celling-price': '80.3', 'floor-price': '65.7', 'max-price': '73.2', 'min-rice': '72.0', 'reference-price': '73.0', 'stock-code': 'BAX'}, {'average-price': '12.0', 'celling-price': '13.2', 'floor-price': '10.8', 'max-price': '12.0', 'min-rice': '12.0', 'reference-price': '12.0', 'stock-code': 'BBS'}, {'average-price': '24.5', 'celling-price': '26.9', 'floor-price': '22.1', 'max-price': '25.4', 'min-rice': '23.8', 'reference-price': '24.5', 'stock-code': 'BCC'}, {'average-price': '39.2', 'celling-price': '43.4', 'floor-price': '35.6', 'max-price': '39.5', 'min-rice': '39.0', 'reference-price': '39.5', 'stock-code': 'BCF'}, {'average-price': '14.7', 'celling-price': '17.9', 'floor-price': '14.7', 'max-price': '14.7', 'min-rice': '14.7', 'reference-price': '16.3', 'stock-code': 'BDB'}, {'average-price': '', 'celling-price': '50.6', 'floor-price': '41.4', 'max-price': '', 'min-rice': '', 'reference-price': '46.0', 'stock-code': 'BED'}, ...]<br>
+<strong>url</strong> = 'https://banggia.hnx.vn/'</td></tr></table>
+</body></html>

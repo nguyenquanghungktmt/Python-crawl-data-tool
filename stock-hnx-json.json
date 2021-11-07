@@ -28,40 +28,40 @@
             "average-price": ""
         },
         {
-            "stock-code": "",
-            "reference-price": "",
-            "celling-price": "",
-            "floor-price": "",
-            "max-price": "",
-            "min-rice": "",
-            "average-price": ""
+            "stock-code": "ALT",
+            "reference-price": "14.8",
+            "celling-price": "16.2",
+            "floor-price": "13.4",
+            "max-price": "16.2",
+            "min-rice": "16.2",
+            "average-price": "16.2"
         },
         {
-            "stock-code": "",
-            "reference-price": "",
-            "celling-price": "",
-            "floor-price": "",
-            "max-price": "",
-            "min-rice": "",
-            "average-price": ""
+            "stock-code": "AMC",
+            "reference-price": "25.8",
+            "celling-price": "28.3",
+            "floor-price": "23.3",
+            "max-price": "25.8",
+            "min-rice": "25.8",
+            "average-price": "25.8"
         },
         {
-            "stock-code": "",
-            "reference-price": "",
-            "celling-price": "",
-            "floor-price": "",
-            "max-price": "",
-            "min-rice": "",
-            "average-price": ""
+            "stock-code": "AME",
+            "reference-price": "11.4",
+            "celling-price": "12.5",
+            "floor-price": "10.3",
+            "max-price": "11.3",
+            "min-rice": "10.3",
+            "average-price": "10.6"
         },
         {
-            "stock-code": "",
-            "reference-price": "",
-            "celling-price": "",
-            "floor-price": "",
-            "max-price": "",
-            "min-rice": "",
-            "average-price": ""
+            "stock-code": "AMV",
+            "reference-price": "11.2",
+            "celling-price": "12.3",
+            "floor-price": "10.1",
+            "max-price": "11.7",
+            "min-rice": "11.1",
+            "average-price": "11.4"
         },
         {
             "stock-code": "API",
@@ -494,6 +494,2598 @@
             "max-price": "",
             "min-rice": "",
             "average-price": ""
+        },
+        {
+            "stock-code": "D11",
+            "reference-price": "38.7",
+            "celling-price": "42.5",
+            "floor-price": "34.9",
+            "max-price": "41.0",
+            "min-rice": "38.5",
+            "average-price": "39.0"
+        },
+        {
+            "stock-code": "DAD",
+            "reference-price": "25.0",
+            "celling-price": "27.5",
+            "floor-price": "22.5",
+            "max-price": "24.9",
+            "min-rice": "22.9",
+            "average-price": "23.4"
+        },
+        {
+            "stock-code": "DAE",
+            "reference-price": "23.8",
+            "celling-price": "26.1",
+            "floor-price": "21.5",
+            "max-price": "23.5",
+            "min-rice": "23.5",
+            "average-price": "23.5"
+        },
+        {
+            "stock-code": "DC2",
+            "reference-price": "16.9",
+            "celling-price": "18.5",
+            "floor-price": "15.3",
+            "max-price": "18.0",
+            "min-rice": "16.1",
+            "average-price": "16.8"
+        },
+        {
+            "stock-code": "DDG",
+            "reference-price": "29.1",
+            "celling-price": "32.0",
+            "floor-price": "26.2",
+            "max-price": "29.4",
+            "min-rice": "28.5",
+            "average-price": "29.0"
+        },
+        {
+            "stock-code": "DHP",
+            "reference-price": "12.5",
+            "celling-price": "13.7",
+            "floor-price": "11.3",
+            "max-price": "12.3",
+            "min-rice": "11.9",
+            "average-price": "12.0"
+        },
+        {
+            "stock-code": "DHT",
+            "reference-price": "46.7",
+            "celling-price": "51.3",
+            "floor-price": "42.1",
+            "max-price": "46.8",
+            "min-rice": "46.2",
+            "average-price": "46.6"
+        },
+        {
+            "stock-code": "DIH",
+            "reference-price": "58.9",
+            "celling-price": "64.7",
+            "floor-price": "53.1",
+            "max-price": "60.0",
+            "min-rice": "57.9",
+            "average-price": "58.4"
+        },
+        {
+            "stock-code": "DL1",
+            "reference-price": "12.2",
+            "celling-price": "13.4",
+            "floor-price": "11.0",
+            "max-price": "12.9",
+            "min-rice": "12.0",
+            "average-price": "12.3"
+        },
+        {
+            "stock-code": "DNC",
+            "reference-price": "58.5",
+            "celling-price": "64.3",
+            "floor-price": "52.7",
+            "max-price": "58.5",
+            "min-rice": "58.5",
+            "average-price": "58.5"
+        },
+        {
+            "stock-code": "DNM",
+            "reference-price": "35.1",
+            "celling-price": "38.6",
+            "floor-price": "31.6",
+            "max-price": "35.8",
+            "min-rice": "35.0",
+            "average-price": "35.3"
+        },
+        {
+            "stock-code": "DNP",
+            "reference-price": "20.5",
+            "celling-price": "22.5",
+            "floor-price": "18.5",
+            "max-price": "22.4",
+            "min-rice": "19.3",
+            "average-price": "20.6"
+        },
+        {
+            "stock-code": "DP3",
+            "reference-price": "116.1",
+            "celling-price": "127.7",
+            "floor-price": "104.5",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "DPC",
+            "reference-price": "21.9",
+            "celling-price": "24.0",
+            "floor-price": "19.8",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "DS3",
+            "reference-price": "8.8",
+            "celling-price": "9.6",
+            "floor-price": "8.0",
+            "max-price": "8.8",
+            "min-rice": "8.3",
+            "average-price": "8.5"
+        },
+        {
+            "stock-code": "DST",
+            "reference-price": "5.8",
+            "celling-price": "6.3",
+            "floor-price": "5.3",
+            "max-price": "6.0",
+            "min-rice": "5.7",
+            "average-price": "5.8"
+        },
+        {
+            "stock-code": "DTD",
+            "reference-price": "49.0",
+            "celling-price": "53.9",
+            "floor-price": "44.1",
+            "max-price": "50.6",
+            "min-rice": "49.0",
+            "average-price": "49.6"
+        },
+        {
+            "stock-code": "DTK",
+            "reference-price": "15.0",
+            "celling-price": "16.5",
+            "floor-price": "13.5",
+            "max-price": "15.5",
+            "min-rice": "14.5",
+            "average-price": "14.9"
+        },
+        {
+            "stock-code": "DVG",
+            "reference-price": "17.3",
+            "celling-price": "19.0",
+            "floor-price": "15.6",
+            "max-price": "17.5",
+            "min-rice": "17.2",
+            "average-price": "17.3"
+        },
+        {
+            "stock-code": "DXP",
+            "reference-price": "21.5",
+            "celling-price": "23.6",
+            "floor-price": "19.4",
+            "max-price": "21.6",
+            "min-rice": "21.3",
+            "average-price": "21.5"
+        },
+        {
+            "stock-code": "DZM",
+            "reference-price": "8.6",
+            "celling-price": "9.4",
+            "floor-price": "7.8",
+            "max-price": "8.6",
+            "min-rice": "8.5",
+            "average-price": "8.6"
+        },
+        {
+            "stock-code": "EBS",
+            "reference-price": "10.2",
+            "celling-price": "11.2",
+            "floor-price": "9.2",
+            "max-price": "10.2",
+            "min-rice": "10.1",
+            "average-price": "10.1"
+        },
+        {
+            "stock-code": "ECI",
+            "reference-price": "48.0",
+            "celling-price": "52.8",
+            "floor-price": "43.2",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "EID",
+            "reference-price": "24.6",
+            "celling-price": "27.0",
+            "floor-price": "22.2",
+            "max-price": "25.0",
+            "min-rice": "24.3",
+            "average-price": "24.7"
+        },
+        {
+            "stock-code": "EVS",
+            "reference-price": "41.5",
+            "celling-price": "45.6",
+            "floor-price": "37.4",
+            "max-price": "42.4",
+            "min-rice": "39.9",
+            "average-price": "41.2"
+        },
+        {
+            "stock-code": "FID",
+            "reference-price": "7.4",
+            "celling-price": "8.1",
+            "floor-price": "6.7",
+            "max-price": "7.5",
+            "min-rice": "7.1",
+            "average-price": "7.2"
+        },
+        {
+            "stock-code": "GDW",
+            "reference-price": "25.9",
+            "celling-price": "28.4",
+            "floor-price": "23.4",
+            "max-price": "26.6",
+            "min-rice": "25.9",
+            "average-price": "26.2"
+        },
+        {
+            "stock-code": "GIC",
+            "reference-price": "22.5",
+            "celling-price": "24.7",
+            "floor-price": "20.3",
+            "max-price": "22.6",
+            "min-rice": "22.5",
+            "average-price": "22.5"
+        },
+        {
+            "stock-code": "GKM",
+            "reference-price": "33.5",
+            "celling-price": "36.8",
+            "floor-price": "30.2",
+            "max-price": "36.8",
+            "min-rice": "33.0",
+            "average-price": "34.0"
+        },
+        {
+            "stock-code": "GLT",
+            "reference-price": "35.0",
+            "celling-price": "38.5",
+            "floor-price": "31.5",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "GMA",
+            "reference-price": "61.0",
+            "celling-price": "67.1",
+            "floor-price": "54.9",
+            "max-price": "61.0",
+            "min-rice": "61.0",
+            "average-price": "61.0"
+        },
+        {
+            "stock-code": "GMX",
+            "reference-price": "22.4",
+            "celling-price": "24.6",
+            "floor-price": "20.2",
+            "max-price": "22.4",
+            "min-rice": "21.4",
+            "average-price": "21.8"
+        },
+        {
+            "stock-code": "HAD",
+            "reference-price": "17.1",
+            "celling-price": "18.8",
+            "floor-price": "15.4",
+            "max-price": "17.2",
+            "min-rice": "17.0",
+            "average-price": "17.1"
+        },
+        {
+            "stock-code": "HAT",
+            "reference-price": "20.0",
+            "celling-price": "22.0",
+            "floor-price": "18.0",
+            "max-price": "20.5",
+            "min-rice": "20.0",
+            "average-price": "20.2"
+        },
+        {
+            "stock-code": "HBS",
+            "reference-price": "14.2",
+            "celling-price": "15.6",
+            "floor-price": "12.8",
+            "max-price": "14.4",
+            "min-rice": "13.8",
+            "average-price": "14.0"
+        },
+        {
+            "stock-code": "HCC",
+            "reference-price": "13.1",
+            "celling-price": "14.4",
+            "floor-price": "11.8",
+            "max-price": "13.1",
+            "min-rice": "13.0",
+            "average-price": "13.0"
+        },
+        {
+            "stock-code": "HCT",
+            "reference-price": "15.9",
+            "celling-price": "17.4",
+            "floor-price": "14.4",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "HDA",
+            "reference-price": "27.9",
+            "celling-price": "30.6",
+            "floor-price": "25.2",
+            "max-price": "28.1",
+            "min-rice": "27.4",
+            "average-price": "27.8"
+        },
+        {
+            "stock-code": "HEV",
+            "reference-price": "17.5",
+            "celling-price": "19.2",
+            "floor-price": "15.8",
+            "max-price": "15.8",
+            "min-rice": "15.8",
+            "average-price": "15.8"
+        },
+        {
+            "stock-code": "HGM",
+            "reference-price": "45.5",
+            "celling-price": "50.0",
+            "floor-price": "41.0",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "HHC",
+            "reference-price": "75.5",
+            "celling-price": "83.0",
+            "floor-price": "68.0",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "HHG",
+            "reference-price": "5.7",
+            "celling-price": "6.2",
+            "floor-price": "5.2",
+            "max-price": "5.8",
+            "min-rice": "5.4",
+            "average-price": "5.5"
+        },
+        {
+            "stock-code": "HJS",
+            "reference-price": "33.4",
+            "celling-price": "36.7",
+            "floor-price": "30.1",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "HKT",
+            "reference-price": "6.6",
+            "celling-price": "7.2",
+            "floor-price": "6.0",
+            "max-price": "6.7",
+            "min-rice": "6.7",
+            "average-price": "6.7"
+        },
+        {
+            "stock-code": "HLC",
+            "reference-price": "15.9",
+            "celling-price": "17.4",
+            "floor-price": "14.4",
+            "max-price": "15.5",
+            "min-rice": "14.9",
+            "average-price": "15.0"
+        },
+        {
+            "stock-code": "HLD",
+            "reference-price": "49.0",
+            "celling-price": "53.9",
+            "floor-price": "44.1",
+            "max-price": "53.5",
+            "min-rice": "48.5",
+            "average-price": "49.1"
+        },
+        {
+            "stock-code": "HMH",
+            "reference-price": "16.0",
+            "celling-price": "17.6",
+            "floor-price": "14.4",
+            "max-price": "16.4",
+            "min-rice": "15.8",
+            "average-price": "16.1"
+        },
+        {
+            "stock-code": "HOM",
+            "reference-price": "10.4",
+            "celling-price": "11.4",
+            "floor-price": "9.4",
+            "max-price": "10.7",
+            "min-rice": "10.2",
+            "average-price": "10.4"
+        },
+        {
+            "stock-code": "HPM",
+            "reference-price": "10.4",
+            "celling-price": "11.4",
+            "floor-price": "9.4",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "HTC",
+            "reference-price": "33.0",
+            "celling-price": "36.3",
+            "floor-price": "29.7",
+            "max-price": "31.1",
+            "min-rice": "31.1",
+            "average-price": "31.1"
+        },
+        {
+            "stock-code": "HTP",
+            "reference-price": "32.3",
+            "celling-price": "35.5",
+            "floor-price": "29.1",
+            "max-price": "31.5",
+            "min-rice": "30.5",
+            "average-price": "31.3"
+        },
+        {
+            "stock-code": "HUT",
+            "reference-price": "12.9",
+            "celling-price": "14.1",
+            "floor-price": "11.7",
+            "max-price": "13.3",
+            "min-rice": "12.7",
+            "average-price": "12.9"
+        },
+        {
+            "stock-code": "HVT",
+            "reference-price": "55.3",
+            "celling-price": "60.8",
+            "floor-price": "49.8",
+            "max-price": "60.5",
+            "min-rice": "54.5",
+            "average-price": "56.2"
+        },
+        {
+            "stock-code": "ICG",
+            "reference-price": "16.3",
+            "celling-price": "17.9",
+            "floor-price": "14.7",
+            "max-price": "17.8",
+            "min-rice": "17.1",
+            "average-price": "17.6"
+        },
+        {
+            "stock-code": "IDC",
+            "reference-price": "80.1",
+            "celling-price": "88.1",
+            "floor-price": "72.1",
+            "max-price": "88.1",
+            "min-rice": "80.1",
+            "average-price": "84.2"
+        },
+        {
+            "stock-code": "IDJ",
+            "reference-price": "67.2",
+            "celling-price": "73.9",
+            "floor-price": "60.5",
+            "max-price": "71.8",
+            "min-rice": "67.5",
+            "average-price": "69.6"
+        },
+        {
+            "stock-code": "IDV",
+            "reference-price": "71.5",
+            "celling-price": "78.6",
+            "floor-price": "64.4",
+            "max-price": "72.0",
+            "min-rice": "70.1",
+            "average-price": "71.1"
+        },
+        {
+            "stock-code": "INC",
+            "reference-price": "10.6",
+            "celling-price": "11.6",
+            "floor-price": "9.6",
+            "max-price": "11.6",
+            "min-rice": "10.5",
+            "average-price": "11.2"
+        },
+        {
+            "stock-code": "INN",
+            "reference-price": "37.6",
+            "celling-price": "41.3",
+            "floor-price": "33.9",
+            "max-price": "37.7",
+            "min-rice": "37.4",
+            "average-price": "37.5"
+        },
+        {
+            "stock-code": "IPA",
+            "reference-price": "86.0",
+            "celling-price": "94.6",
+            "floor-price": "77.4",
+            "max-price": "87.0",
+            "min-rice": "85.8",
+            "average-price": "86.2"
+        },
+        {
+            "stock-code": "ITQ",
+            "reference-price": "9.5",
+            "celling-price": "10.4",
+            "floor-price": "8.6",
+            "max-price": "9.8",
+            "min-rice": "9.5",
+            "average-price": "9.6"
+        },
+        {
+            "stock-code": "IVS",
+            "reference-price": "14.8",
+            "celling-price": "16.2",
+            "floor-price": "13.4",
+            "max-price": "15.1",
+            "min-rice": "14.4",
+            "average-price": "14.8"
+        },
+        {
+            "stock-code": "KDM",
+            "reference-price": "10.2",
+            "celling-price": "11.2",
+            "floor-price": "9.2",
+            "max-price": "10.8",
+            "min-rice": "10.0",
+            "average-price": "10.4"
+        },
+        {
+            "stock-code": "KHS",
+            "reference-price": "27.0",
+            "celling-price": "29.7",
+            "floor-price": "24.3",
+            "max-price": "26.9",
+            "min-rice": "26.8",
+            "average-price": "26.9"
+        },
+        {
+            "stock-code": "KKC",
+            "reference-price": "25.3",
+            "celling-price": "27.8",
+            "floor-price": "22.8",
+            "max-price": "25.2",
+            "min-rice": "25.2",
+            "average-price": "25.2"
+        },
+        {
+            "stock-code": "KLF",
+            "reference-price": "5.1",
+            "celling-price": "5.6",
+            "floor-price": "4.6",
+            "max-price": "5.6",
+            "min-rice": "5.1",
+            "average-price": "5.4"
+        },
+        {
+            "stock-code": "KMT",
+            "reference-price": "10.8",
+            "celling-price": "11.8",
+            "floor-price": "9.8",
+            "max-price": "11.0",
+            "min-rice": "10.6",
+            "average-price": "10.9"
+        },
+        {
+            "stock-code": "KSD",
+            "reference-price": "6.0",
+            "celling-price": "6.6",
+            "floor-price": "5.4",
+            "max-price": "5.9",
+            "min-rice": "5.5",
+            "average-price": "5.7"
+        },
+        {
+            "stock-code": "KSF",
+            "reference-price": "72.1",
+            "celling-price": "79.3",
+            "floor-price": "64.9",
+            "max-price": "75.8",
+            "min-rice": "72.1",
+            "average-price": "73.0"
+        },
+        {
+            "stock-code": "KSQ",
+            "reference-price": "8.8",
+            "celling-price": "9.6",
+            "floor-price": "8.0",
+            "max-price": "9.6",
+            "min-rice": "8.1",
+            "average-price": "8.7"
+        },
+        {
+            "stock-code": "KST",
+            "reference-price": "32.4",
+            "celling-price": "35.6",
+            "floor-price": "29.2",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "KTS",
+            "reference-price": "28.0",
+            "celling-price": "30.8",
+            "floor-price": "25.2",
+            "max-price": "28.0",
+            "min-rice": "27.3",
+            "average-price": "27.9"
+        },
+        {
+            "stock-code": "KTT",
+            "reference-price": "11.8",
+            "celling-price": "12.9",
+            "floor-price": "10.7",
+            "max-price": "12.3",
+            "min-rice": "11.6",
+            "average-price": "11.8"
+        },
+        {
+            "stock-code": "KVC",
+            "reference-price": "5.8",
+            "celling-price": "6.3",
+            "floor-price": "5.3",
+            "max-price": "5.9",
+            "min-rice": "5.7",
+            "average-price": "5.7"
+        },
+        {
+            "stock-code": "L14",
+            "reference-price": "195.2",
+            "celling-price": "214.7",
+            "floor-price": "175.7",
+            "max-price": "210.0",
+            "min-rice": "195.0",
+            "average-price": "202.5"
+        },
+        {
+            "stock-code": "L18",
+            "reference-price": "64.3",
+            "celling-price": "70.7",
+            "floor-price": "57.9",
+            "max-price": "65.0",
+            "min-rice": "61.2",
+            "average-price": "62.5"
+        },
+        {
+            "stock-code": "L35",
+            "reference-price": "6.0",
+            "celling-price": "6.6",
+            "floor-price": "5.4",
+            "max-price": "6.1",
+            "min-rice": "6.0",
+            "average-price": "6.0"
+        },
+        {
+            "stock-code": "L40",
+            "reference-price": "33.1",
+            "celling-price": "36.4",
+            "floor-price": "29.8",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "L43",
+            "reference-price": "6.1",
+            "celling-price": "6.7",
+            "floor-price": "5.5",
+            "max-price": "5.8",
+            "min-rice": "5.5",
+            "average-price": "5.6"
+        },
+        {
+            "stock-code": "L61",
+            "reference-price": "7.7",
+            "celling-price": "8.4",
+            "floor-price": "7.0",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "L62",
+            "reference-price": "7.0",
+            "celling-price": "7.7",
+            "floor-price": "6.3",
+            "max-price": "6.9",
+            "min-rice": "6.7",
+            "average-price": "6.7"
+        },
+        {
+            "stock-code": "LAS",
+            "reference-price": "22.7",
+            "celling-price": "24.9",
+            "floor-price": "20.5",
+            "max-price": "24.9",
+            "min-rice": "22.2",
+            "average-price": "23.7"
+        },
+        {
+            "stock-code": "LBE",
+            "reference-price": "29.0",
+            "celling-price": "31.9",
+            "floor-price": "26.1",
+            "max-price": "26.2",
+            "min-rice": "26.1",
+            "average-price": "26.2"
+        },
+        {
+            "stock-code": "LCD",
+            "reference-price": "21.1",
+            "celling-price": "23.2",
+            "floor-price": "19.0",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "LCS",
+            "reference-price": "5.6",
+            "celling-price": "6.1",
+            "floor-price": "5.1",
+            "max-price": "5.6",
+            "min-rice": "5.1",
+            "average-price": "5.3"
+        },
+        {
+            "stock-code": "LDP",
+            "reference-price": "13.6",
+            "celling-price": "14.9",
+            "floor-price": "12.3",
+            "max-price": "13.8",
+            "min-rice": "13.5",
+            "average-price": "13.7"
+        },
+        {
+            "stock-code": "LHC",
+            "reference-price": "93.0",
+            "celling-price": "102.3",
+            "floor-price": "83.7",
+            "max-price": "93.9",
+            "min-rice": "92.0",
+            "average-price": "92.9"
+        },
+        {
+            "stock-code": "LIG",
+            "reference-price": "15.6",
+            "celling-price": "17.1",
+            "floor-price": "14.1",
+            "max-price": "17.1",
+            "min-rice": "16.0",
+            "average-price": "16.7"
+        },
+        {
+            "stock-code": "LM7",
+            "reference-price": "5.7",
+            "celling-price": "6.2",
+            "floor-price": "5.2",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "LUT",
+            "reference-price": "7.3",
+            "celling-price": "8.0",
+            "floor-price": "6.6",
+            "max-price": "7.4",
+            "min-rice": "7.1",
+            "average-price": "7.2"
+        },
+        {
+            "stock-code": "MAC",
+            "reference-price": "8.0",
+            "celling-price": "8.8",
+            "floor-price": "7.2",
+            "max-price": "8.3",
+            "min-rice": "7.9",
+            "average-price": "8.0"
+        },
+        {
+            "stock-code": "MAS",
+            "reference-price": "44.0",
+            "celling-price": "48.4",
+            "floor-price": "39.6",
+            "max-price": "43.0",
+            "min-rice": "42.0",
+            "average-price": "42.1"
+        },
+        {
+            "stock-code": "MBG",
+            "reference-price": "13.6",
+            "celling-price": "14.9",
+            "floor-price": "12.3",
+            "max-price": "14.2",
+            "min-rice": "13.4",
+            "average-price": "13.7"
+        },
+        {
+            "stock-code": "MBS",
+            "reference-price": "39.3",
+            "celling-price": "43.2",
+            "floor-price": "35.4",
+            "max-price": "40.0",
+            "min-rice": "38.8",
+            "average-price": "39.5"
+        },
+        {
+            "stock-code": "MCC",
+            "reference-price": "11.3",
+            "celling-price": "12.4",
+            "floor-price": "10.2",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "MCF",
+            "reference-price": "10.7",
+            "celling-price": "11.7",
+            "floor-price": "9.7",
+            "max-price": "11.2",
+            "min-rice": "10.8",
+            "average-price": "11.0"
+        },
+        {
+            "stock-code": "MCO",
+            "reference-price": "7.6",
+            "celling-price": "8.3",
+            "floor-price": "6.9",
+            "max-price": "7.6",
+            "min-rice": "7.2",
+            "average-price": "7.3"
+        },
+        {
+            "stock-code": "MDC",
+            "reference-price": "14.0",
+            "celling-price": "15.4",
+            "floor-price": "12.6",
+            "max-price": "14.0",
+            "min-rice": "13.5",
+            "average-price": "13.7"
+        },
+        {
+            "stock-code": "MED",
+            "reference-price": "36.8",
+            "celling-price": "40.4",
+            "floor-price": "33.2",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "MEL",
+            "reference-price": "20.3",
+            "celling-price": "22.3",
+            "floor-price": "18.3",
+            "max-price": "20.3",
+            "min-rice": "19.7",
+            "average-price": "19.9"
+        },
+        {
+            "stock-code": "MHL",
+            "reference-price": "6.1",
+            "celling-price": "6.7",
+            "floor-price": "5.5",
+            "max-price": "6.7",
+            "min-rice": "5.6",
+            "average-price": "6.4"
+        },
+        {
+            "stock-code": "MIM",
+            "reference-price": "8.5",
+            "celling-price": "9.3",
+            "floor-price": "7.7",
+            "max-price": "8.9",
+            "min-rice": "8.8",
+            "average-price": "8.8"
+        },
+        {
+            "stock-code": "MKV",
+            "reference-price": "29.7",
+            "celling-price": "32.6",
+            "floor-price": "26.8",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "MST",
+            "reference-price": "18.0",
+            "celling-price": "19.8",
+            "floor-price": "16.2",
+            "max-price": "18.3",
+            "min-rice": "17.9",
+            "average-price": "18.1"
+        },
+        {
+            "stock-code": "MVB",
+            "reference-price": "28.1",
+            "celling-price": "30.9",
+            "floor-price": "25.3",
+            "max-price": "28.4",
+            "min-rice": "27.8",
+            "average-price": "28.0"
+        },
+        {
+            "stock-code": "NAG",
+            "reference-price": "10.2",
+            "celling-price": "11.2",
+            "floor-price": "9.2",
+            "max-price": "10.4",
+            "min-rice": "10.1",
+            "average-price": "10.2"
+        },
+        {
+            "stock-code": "NAP",
+            "reference-price": "11.8",
+            "celling-price": "12.9",
+            "floor-price": "10.7",
+            "max-price": "11.8",
+            "min-rice": "11.8",
+            "average-price": "11.8"
+        },
+        {
+            "stock-code": "NBC",
+            "reference-price": "22.1",
+            "celling-price": "24.3",
+            "floor-price": "19.9",
+            "max-price": "22.3",
+            "min-rice": "21.7",
+            "average-price": "21.9"
+        },
+        {
+            "stock-code": "NBP",
+            "reference-price": "17.5",
+            "celling-price": "19.2",
+            "floor-price": "15.8",
+            "max-price": "17.6",
+            "min-rice": "17.5",
+            "average-price": "17.6"
+        },
+        {
+            "stock-code": "NBW",
+            "reference-price": "23.1",
+            "celling-price": "25.4",
+            "floor-price": "20.8",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "NDN",
+            "reference-price": "22.9",
+            "celling-price": "25.1",
+            "floor-price": "20.7",
+            "max-price": "23.2",
+            "min-rice": "22.5",
+            "average-price": "22.8"
+        },
+        {
+            "stock-code": "NDX",
+            "reference-price": "11.8",
+            "celling-price": "12.9",
+            "floor-price": "10.7",
+            "max-price": "12.0",
+            "min-rice": "11.0",
+            "average-price": "11.5"
+        },
+        {
+            "stock-code": "NET",
+            "reference-price": "55.2",
+            "celling-price": "60.7",
+            "floor-price": "49.7",
+            "max-price": "56.5",
+            "min-rice": "55.0",
+            "average-price": "56.0"
+        },
+        {
+            "stock-code": "NFC",
+            "reference-price": "15.0",
+            "celling-price": "16.5",
+            "floor-price": "13.5",
+            "max-price": "16.0",
+            "min-rice": "14.9",
+            "average-price": "15.3"
+        },
+        {
+            "stock-code": "NHC",
+            "reference-price": "31.9",
+            "celling-price": "35.0",
+            "floor-price": "28.8",
+            "max-price": "31.8",
+            "min-rice": "31.0",
+            "average-price": "31.5"
+        },
+        {
+            "stock-code": "NRC",
+            "reference-price": "30.8",
+            "celling-price": "33.8",
+            "floor-price": "27.8",
+            "max-price": "33.8",
+            "min-rice": "30.0",
+            "average-price": "33.0"
+        },
+        {
+            "stock-code": "NSH",
+            "reference-price": "16.9",
+            "celling-price": "18.5",
+            "floor-price": "15.3",
+            "max-price": "17.0",
+            "min-rice": "16.3",
+            "average-price": "16.5"
+        },
+        {
+            "stock-code": "NST",
+            "reference-price": "9.5",
+            "celling-price": "10.4",
+            "floor-price": "8.6",
+            "max-price": "9.5",
+            "min-rice": "9.3",
+            "average-price": "9.4"
+        },
+        {
+            "stock-code": "NTH",
+            "reference-price": "35.0",
+            "celling-price": "38.5",
+            "floor-price": "31.5",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "NTP",
+            "reference-price": "56.0",
+            "celling-price": "61.6",
+            "floor-price": "50.4",
+            "max-price": "57.8",
+            "min-rice": "55.4",
+            "average-price": "56.0"
+        },
+        {
+            "stock-code": "NVB",
+            "reference-price": "30.0",
+            "celling-price": "33.0",
+            "floor-price": "27.0",
+            "max-price": "30.3",
+            "min-rice": "29.7",
+            "average-price": "30.1"
+        },
+        {
+            "stock-code": "OCH",
+            "reference-price": "9.5",
+            "celling-price": "10.4",
+            "floor-price": "8.6",
+            "max-price": "9.6",
+            "min-rice": "9.2",
+            "average-price": "9.4"
+        },
+        {
+            "stock-code": "ONE",
+            "reference-price": "7.9",
+            "celling-price": "8.6",
+            "floor-price": "7.2",
+            "max-price": "8.0",
+            "min-rice": "7.7",
+            "average-price": "7.8"
+        },
+        {
+            "stock-code": "PBP",
+            "reference-price": "12.1",
+            "celling-price": "13.3",
+            "floor-price": "10.9",
+            "max-price": "12.9",
+            "min-rice": "12.0",
+            "average-price": "12.2"
+        },
+        {
+            "stock-code": "PCE",
+            "reference-price": "24.8",
+            "celling-price": "27.2",
+            "floor-price": "22.4",
+            "max-price": "27.1",
+            "min-rice": "25.0",
+            "average-price": "26.2"
+        },
+        {
+            "stock-code": "PCG",
+            "reference-price": "11.0",
+            "celling-price": "12.1",
+            "floor-price": "9.9",
+            "max-price": "11.1",
+            "min-rice": "10.9",
+            "average-price": "11.0"
+        },
+        {
+            "stock-code": "PCT",
+            "reference-price": "8.8",
+            "celling-price": "9.6",
+            "floor-price": "8.0",
+            "max-price": "9.3",
+            "min-rice": "8.8",
+            "average-price": "9.0"
+        },
+        {
+            "stock-code": "PDB",
+            "reference-price": "30.6",
+            "celling-price": "33.6",
+            "floor-price": "27.6",
+            "max-price": "33.6",
+            "min-rice": "32.0",
+            "average-price": "33.5"
+        },
+        {
+            "stock-code": "PDC",
+            "reference-price": "7.0",
+            "celling-price": "7.7",
+            "floor-price": "6.3",
+            "max-price": "7.0",
+            "min-rice": "7.0",
+            "average-price": "7.0"
+        },
+        {
+            "stock-code": "PEN",
+            "reference-price": "9.5",
+            "celling-price": "10.4",
+            "floor-price": "8.6",
+            "max-price": "9.4",
+            "min-rice": "9.3",
+            "average-price": "9.3"
+        },
+        {
+            "stock-code": "PGN",
+            "reference-price": "17.8",
+            "celling-price": "19.5",
+            "floor-price": "16.1",
+            "max-price": "17.8",
+            "min-rice": "17.7",
+            "average-price": "17.8"
+        },
+        {
+            "stock-code": "PGS",
+            "reference-price": "28.5",
+            "celling-price": "31.3",
+            "floor-price": "25.7",
+            "max-price": "28.9",
+            "min-rice": "28.5",
+            "average-price": "28.7"
+        },
+        {
+            "stock-code": "PGT",
+            "reference-price": "10.8",
+            "celling-price": "11.8",
+            "floor-price": "9.8",
+            "max-price": "11.2",
+            "min-rice": "10.5",
+            "average-price": "10.8"
+        },
+        {
+            "stock-code": "PHN",
+            "reference-price": "44.4",
+            "celling-price": "48.8",
+            "floor-price": "40.0",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "PHP",
+            "reference-price": "29.8",
+            "celling-price": "32.7",
+            "floor-price": "26.9",
+            "max-price": "30.5",
+            "min-rice": "29.7",
+            "average-price": "30.2"
+        },
+        {
+            "stock-code": "PIA",
+            "reference-price": "27.1",
+            "celling-price": "29.8",
+            "floor-price": "24.4",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "PIC",
+            "reference-price": "12.0",
+            "celling-price": "13.2",
+            "floor-price": "10.8",
+            "max-price": "12.0",
+            "min-rice": "12.0",
+            "average-price": "12.0"
+        },
+        {
+            "stock-code": "PJC",
+            "reference-price": "23.7",
+            "celling-price": "26.0",
+            "floor-price": "21.4",
+            "max-price": "23.5",
+            "min-rice": "23.0",
+            "average-price": "23.1"
+        },
+        {
+            "stock-code": "PLC",
+            "reference-price": "42.6",
+            "celling-price": "46.8",
+            "floor-price": "38.4",
+            "max-price": "43.5",
+            "min-rice": "42.2",
+            "average-price": "42.6"
+        },
+        {
+            "stock-code": "PMB",
+            "reference-price": "16.7",
+            "celling-price": "18.3",
+            "floor-price": "15.1",
+            "max-price": "18.3",
+            "min-rice": "16.7",
+            "average-price": "18.0"
+        },
+        {
+            "stock-code": "PMC",
+            "reference-price": "68.6",
+            "celling-price": "75.4",
+            "floor-price": "61.8",
+            "max-price": "68.5",
+            "min-rice": "65.0",
+            "average-price": "66.8"
+        },
+        {
+            "stock-code": "PMP",
+            "reference-price": "15.5",
+            "celling-price": "17.0",
+            "floor-price": "14.0",
+            "max-price": "16.5",
+            "min-rice": "16.4",
+            "average-price": "16.5"
+        },
+        {
+            "stock-code": "PMS",
+            "reference-price": "23.0",
+            "celling-price": "25.3",
+            "floor-price": "20.7",
+            "max-price": "23.2",
+            "min-rice": "23.1",
+            "average-price": "23.2"
+        },
+        {
+            "stock-code": "POT",
+            "reference-price": "21.0",
+            "celling-price": "23.1",
+            "floor-price": "18.9",
+            "max-price": "21.1",
+            "min-rice": "20.0",
+            "average-price": "20.1"
+        },
+        {
+            "stock-code": "PPE",
+            "reference-price": "13.0",
+            "celling-price": "14.3",
+            "floor-price": "11.7",
+            "max-price": "13.0",
+            "min-rice": "12.6",
+            "average-price": "12.8"
+        },
+        {
+            "stock-code": "PPP",
+            "reference-price": "16.3",
+            "celling-price": "17.9",
+            "floor-price": "14.7",
+            "max-price": "16.8",
+            "min-rice": "16.1",
+            "average-price": "16.3"
+        },
+        {
+            "stock-code": "PPS",
+            "reference-price": "13.8",
+            "celling-price": "15.1",
+            "floor-price": "12.5",
+            "max-price": "14.0",
+            "min-rice": "13.3",
+            "average-price": "13.5"
+        },
+        {
+            "stock-code": "PPY",
+            "reference-price": "16.6",
+            "celling-price": "18.2",
+            "floor-price": "15.0",
+            "max-price": "17.2",
+            "min-rice": "16.5",
+            "average-price": "16.6"
+        },
+        {
+            "stock-code": "PRC",
+            "reference-price": "19.5",
+            "celling-price": "21.4",
+            "floor-price": "17.6",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "PRE",
+            "reference-price": "20.9",
+            "celling-price": "22.9",
+            "floor-price": "18.9",
+            "max-price": "21.8",
+            "min-rice": "20.7",
+            "average-price": "20.9"
+        },
+        {
+            "stock-code": "PSC",
+            "reference-price": "17.9",
+            "celling-price": "19.6",
+            "floor-price": "16.2",
+            "max-price": "17.9",
+            "min-rice": "16.2",
+            "average-price": "16.2"
+        },
+        {
+            "stock-code": "PSD",
+            "reference-price": "31.8",
+            "celling-price": "34.9",
+            "floor-price": "28.7",
+            "max-price": "33.0",
+            "min-rice": "31.9",
+            "average-price": "32.6"
+        },
+        {
+            "stock-code": "PSE",
+            "reference-price": "21.0",
+            "celling-price": "23.1",
+            "floor-price": "18.9",
+            "max-price": "23.1",
+            "min-rice": "21.8",
+            "average-price": "22.8"
+        },
+        {
+            "stock-code": "PSI",
+            "reference-price": "16.2",
+            "celling-price": "17.8",
+            "floor-price": "14.6",
+            "max-price": "17.2",
+            "min-rice": "16.4",
+            "average-price": "16.8"
+        },
+        {
+            "stock-code": "PSW",
+            "reference-price": "23.5",
+            "celling-price": "25.8",
+            "floor-price": "21.2",
+            "max-price": "25.8",
+            "min-rice": "24.5",
+            "average-price": "25.6"
+        },
+        {
+            "stock-code": "PTD",
+            "reference-price": "18.5",
+            "celling-price": "20.3",
+            "floor-price": "16.7",
+            "max-price": "18.4",
+            "min-rice": "17.3",
+            "average-price": "17.7"
+        },
+        {
+            "stock-code": "PTI",
+            "reference-price": "38.2",
+            "celling-price": "42.0",
+            "floor-price": "34.4",
+            "max-price": "38.3",
+            "min-rice": "37.1",
+            "average-price": "37.8"
+        },
+        {
+            "stock-code": "PTS",
+            "reference-price": "12.8",
+            "celling-price": "14.0",
+            "floor-price": "11.6",
+            "max-price": "12.8",
+            "min-rice": "12.4",
+            "average-price": "12.5"
+        },
+        {
+            "stock-code": "PV2",
+            "reference-price": "6.4",
+            "celling-price": "7.0",
+            "floor-price": "5.8",
+            "max-price": "6.5",
+            "min-rice": "6.2",
+            "average-price": "6.3"
+        },
+        {
+            "stock-code": "PVB",
+            "reference-price": "16.7",
+            "celling-price": "18.3",
+            "floor-price": "15.1",
+            "max-price": "16.9",
+            "min-rice": "16.4",
+            "average-price": "16.7"
+        },
+        {
+            "stock-code": "PVC",
+            "reference-price": "13.4",
+            "celling-price": "14.7",
+            "floor-price": "12.1",
+            "max-price": "13.9",
+            "min-rice": "13.2",
+            "average-price": "13.5"
+        },
+        {
+            "stock-code": "PVG",
+            "reference-price": "16.0",
+            "celling-price": "17.6",
+            "floor-price": "14.4",
+            "max-price": "16.2",
+            "min-rice": "15.8",
+            "average-price": "16.0"
+        },
+        {
+            "stock-code": "PVI",
+            "reference-price": "50.1",
+            "celling-price": "55.1",
+            "floor-price": "45.1",
+            "max-price": "51.0",
+            "min-rice": "49.5",
+            "average-price": "50.1"
+        },
+        {
+            "stock-code": "PVL",
+            "reference-price": "11.6",
+            "celling-price": "12.7",
+            "floor-price": "10.5",
+            "max-price": "11.9",
+            "min-rice": "11.0",
+            "average-price": "11.3"
+        },
+        {
+            "stock-code": "PVS",
+            "reference-price": "28.5",
+            "celling-price": "31.3",
+            "floor-price": "25.7",
+            "max-price": "29.5",
+            "min-rice": "28.0",
+            "average-price": "28.9"
+        },
+        {
+            "stock-code": "QHD",
+            "reference-price": "36.1",
+            "celling-price": "39.7",
+            "floor-price": "32.5",
+            "max-price": "39.7",
+            "min-rice": "37.1",
+            "average-price": "38.4"
+        },
+        {
+            "stock-code": "QST",
+            "reference-price": "14.3",
+            "celling-price": "15.7",
+            "floor-price": "12.9",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "QTC",
+            "reference-price": "17.7",
+            "celling-price": "19.4",
+            "floor-price": "16.0",
+            "max-price": "18.0",
+            "min-rice": "17.7",
+            "average-price": "18.0"
+        },
+        {
+            "stock-code": "RCL",
+            "reference-price": "17.7",
+            "celling-price": "19.4",
+            "floor-price": "16.0",
+            "max-price": "17.5",
+            "min-rice": "17.0",
+            "average-price": "17.2"
+        },
+        {
+            "stock-code": "S55",
+            "reference-price": "45.1",
+            "celling-price": "49.6",
+            "floor-price": "40.6",
+            "max-price": "46.0",
+            "min-rice": "45.1",
+            "average-price": "45.9"
+        },
+        {
+            "stock-code": "S99",
+            "reference-price": "24.6",
+            "celling-price": "27.0",
+            "floor-price": "22.2",
+            "max-price": "25.5",
+            "min-rice": "24.5",
+            "average-price": "24.8"
+        },
+        {
+            "stock-code": "SAF",
+            "reference-price": "56.0",
+            "celling-price": "61.6",
+            "floor-price": "50.4",
+            "max-price": "56.0",
+            "min-rice": "56.0",
+            "average-price": "56.0"
+        },
+        {
+            "stock-code": "SCG",
+            "reference-price": "78.4",
+            "celling-price": "86.2",
+            "floor-price": "70.6",
+            "max-price": "79.9",
+            "min-rice": "77.6",
+            "average-price": "79.0"
+        },
+        {
+            "stock-code": "SCI",
+            "reference-price": "45.0",
+            "celling-price": "49.5",
+            "floor-price": "40.5",
+            "max-price": "46.0",
+            "min-rice": "44.2",
+            "average-price": "44.9"
+        },
+        {
+            "stock-code": "SD2",
+            "reference-price": "15.2",
+            "celling-price": "16.7",
+            "floor-price": "13.7",
+            "max-price": "16.5",
+            "min-rice": "15.2",
+            "average-price": "15.5"
+        },
+        {
+            "stock-code": "SD4",
+            "reference-price": "7.4",
+            "celling-price": "8.1",
+            "floor-price": "6.7",
+            "max-price": "7.4",
+            "min-rice": "6.9",
+            "average-price": "7.1"
+        },
+        {
+            "stock-code": "SD5",
+            "reference-price": "12.6",
+            "celling-price": "13.8",
+            "floor-price": "11.4",
+            "max-price": "13.2",
+            "min-rice": "12.6",
+            "average-price": "12.8"
+        },
+        {
+            "stock-code": "SD6",
+            "reference-price": "7.3",
+            "celling-price": "8.0",
+            "floor-price": "6.6",
+            "max-price": "7.3",
+            "min-rice": "7.0",
+            "average-price": "7.1"
+        },
+        {
+            "stock-code": "SD9",
+            "reference-price": "18.6",
+            "celling-price": "20.4",
+            "floor-price": "16.8",
+            "max-price": "18.7",
+            "min-rice": "17.7",
+            "average-price": "18.1"
+        },
+        {
+            "stock-code": "SDA",
+            "reference-price": "36.6",
+            "celling-price": "40.2",
+            "floor-price": "33.0",
+            "max-price": "40.2",
+            "min-rice": "36.8",
+            "average-price": "39.7"
+        },
+        {
+            "stock-code": "SDC",
+            "reference-price": "12.0",
+            "celling-price": "13.2",
+            "floor-price": "10.8",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "SDG",
+            "reference-price": "33.5",
+            "celling-price": "36.8",
+            "floor-price": "30.2",
+            "max-price": "30.2",
+            "min-rice": "30.2",
+            "average-price": ""
+        },
+        {
+            "stock-code": "SDN",
+            "reference-price": "43.0",
+            "celling-price": "47.3",
+            "floor-price": "38.7",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "SDT",
+            "reference-price": "7.8",
+            "celling-price": "8.5",
+            "floor-price": "7.1",
+            "max-price": "8.0",
+            "min-rice": "7.8",
+            "average-price": "7.9"
+        },
+        {
+            "stock-code": "SDU",
+            "reference-price": "10.8",
+            "celling-price": "11.8",
+            "floor-price": "9.8",
+            "max-price": "11.0",
+            "min-rice": "10.8",
+            "average-price": "11.0"
+        },
+        {
+            "stock-code": "SEB",
+            "reference-price": "44.9",
+            "celling-price": "49.3",
+            "floor-price": "40.5",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "SED",
+            "reference-price": "22.7",
+            "celling-price": "24.9",
+            "floor-price": "20.5",
+            "max-price": "22.7",
+            "min-rice": "22.2",
+            "average-price": "22.2"
+        },
+        {
+            "stock-code": "SFN",
+            "reference-price": "26.8",
+            "celling-price": "29.4",
+            "floor-price": "24.2",
+            "max-price": "29.4",
+            "min-rice": "26.1",
+            "average-price": "28.9"
+        },
+        {
+            "stock-code": "SGC",
+            "reference-price": "77.2",
+            "celling-price": "84.9",
+            "floor-price": "69.5",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "SGD",
+            "reference-price": "10.5",
+            "celling-price": "11.5",
+            "floor-price": "9.5",
+            "max-price": "11.0",
+            "min-rice": "11.0",
+            "average-price": "11.0"
+        },
+        {
+            "stock-code": "SGH",
+            "reference-price": "38.8",
+            "celling-price": "42.6",
+            "floor-price": "35.0",
+            "max-price": "39.8",
+            "min-rice": "39.8",
+            "average-price": ""
+        },
+        {
+            "stock-code": "SHE",
+            "reference-price": "15.6",
+            "celling-price": "17.1",
+            "floor-price": "14.1",
+            "max-price": "15.5",
+            "min-rice": "15.1",
+            "average-price": "15.3"
+        },
+        {
+            "stock-code": "SHN",
+            "reference-price": "17.7",
+            "celling-price": "19.4",
+            "floor-price": "16.0",
+            "max-price": "17.7",
+            "min-rice": "17.2",
+            "average-price": "17.4"
+        },
+        {
+            "stock-code": "SHS",
+            "reference-price": "43.3",
+            "celling-price": "47.6",
+            "floor-price": "39.0",
+            "max-price": "44.0",
+            "min-rice": "42.9",
+            "average-price": "43.3"
+        },
+        {
+            "stock-code": "SIC",
+            "reference-price": "21.1",
+            "celling-price": "23.2",
+            "floor-price": "19.0",
+            "max-price": "20.7",
+            "min-rice": "19.0",
+            "average-price": "19.0"
+        },
+        {
+            "stock-code": "SJ1",
+            "reference-price": "15.8",
+            "celling-price": "17.3",
+            "floor-price": "14.3",
+            "max-price": "16.2",
+            "min-rice": "15.5",
+            "average-price": "15.8"
+        },
+        {
+            "stock-code": "SJE",
+            "reference-price": "23.4",
+            "celling-price": "25.7",
+            "floor-price": "21.1",
+            "max-price": "23.3",
+            "min-rice": "21.7",
+            "average-price": "22.1"
+        },
+        {
+            "stock-code": "SLS",
+            "reference-price": "153.6",
+            "celling-price": "168.9",
+            "floor-price": "138.3",
+            "max-price": "157.8",
+            "min-rice": "152.0",
+            "average-price": "155.4"
+        },
+        {
+            "stock-code": "SMN",
+            "reference-price": "13.6",
+            "celling-price": "14.9",
+            "floor-price": "12.3",
+            "max-price": "14.5",
+            "min-rice": "14.0",
+            "average-price": "14.1"
+        },
+        {
+            "stock-code": "SMT",
+            "reference-price": "17.0",
+            "celling-price": "18.7",
+            "floor-price": "15.3",
+            "max-price": "17.8",
+            "min-rice": "16.0",
+            "average-price": "16.8"
+        },
+        {
+            "stock-code": "SPI",
+            "reference-price": "11.7",
+            "celling-price": "12.8",
+            "floor-price": "10.6",
+            "max-price": "11.9",
+            "min-rice": "11.4",
+            "average-price": "11.5"
+        },
+        {
+            "stock-code": "SRA",
+            "reference-price": "9.9",
+            "celling-price": "10.8",
+            "floor-price": "9.0",
+            "max-price": "10.8",
+            "min-rice": "9.9",
+            "average-price": "10.7"
+        },
+        {
+            "stock-code": "SSM",
+            "reference-price": "7.4",
+            "celling-price": "8.1",
+            "floor-price": "6.7",
+            "max-price": "7.2",
+            "min-rice": "6.8",
+            "average-price": "7.1"
+        },
+        {
+            "stock-code": "STC",
+            "reference-price": "19.9",
+            "celling-price": "21.8",
+            "floor-price": "18.0",
+            "max-price": "19.9",
+            "min-rice": "19.9",
+            "average-price": "19.9"
+        },
+        {
+            "stock-code": "STP",
+            "reference-price": "10.5",
+            "celling-price": "11.5",
+            "floor-price": "9.5",
+            "max-price": "10.5",
+            "min-rice": "10.2",
+            "average-price": "10.3"
+        },
+        {
+            "stock-code": "SVN",
+            "reference-price": "7.0",
+            "celling-price": "7.7",
+            "floor-price": "6.3",
+            "max-price": "7.2",
+            "min-rice": "6.6",
+            "average-price": "6.8"
+        },
+        {
+            "stock-code": "SZB",
+            "reference-price": "36.8",
+            "celling-price": "40.4",
+            "floor-price": "33.2",
+            "max-price": "36.8",
+            "min-rice": "36.2",
+            "average-price": "36.6"
+        },
+        {
+            "stock-code": "TA9",
+            "reference-price": "13.8",
+            "celling-price": "15.1",
+            "floor-price": "12.5",
+            "max-price": "14.0",
+            "min-rice": "13.2",
+            "average-price": "13.6"
+        },
+        {
+            "stock-code": "TAR",
+            "reference-price": "35.9",
+            "celling-price": "39.4",
+            "floor-price": "32.4",
+            "max-price": "39.4",
+            "min-rice": "35.3",
+            "average-price": "36.9"
+        },
+        {
+            "stock-code": "TBX",
+            "reference-price": "22.3",
+            "celling-price": "24.5",
+            "floor-price": "20.1",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "TC6",
+            "reference-price": "13.9",
+            "celling-price": "15.2",
+            "floor-price": "12.6",
+            "max-price": "14.0",
+            "min-rice": "13.5",
+            "average-price": "13.6"
+        },
+        {
+            "stock-code": "TDN",
+            "reference-price": "15.9",
+            "celling-price": "17.4",
+            "floor-price": "14.4",
+            "max-price": "16.2",
+            "min-rice": "15.6",
+            "average-price": "15.8"
+        },
+        {
+            "stock-code": "TDT",
+            "reference-price": "17.0",
+            "celling-price": "18.7",
+            "floor-price": "15.3",
+            "max-price": "17.3",
+            "min-rice": "16.6",
+            "average-price": "16.9"
+        },
+        {
+            "stock-code": "TET",
+            "reference-price": "33.4",
+            "celling-price": "36.7",
+            "floor-price": "30.1",
+            "max-price": "35.0",
+            "min-rice": "35.0",
+            "average-price": "35.0"
+        },
+        {
+            "stock-code": "TFC",
+            "reference-price": "10.1",
+            "celling-price": "11.1",
+            "floor-price": "9.1",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "THB",
+            "reference-price": "15.2",
+            "celling-price": "16.7",
+            "floor-price": "13.7",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "THD",
+            "reference-price": "235.2",
+            "celling-price": "258.7",
+            "floor-price": "211.7",
+            "max-price": "236.0",
+            "min-rice": "235.2",
+            "average-price": "235.6"
+        },
+        {
+            "stock-code": "THS",
+            "reference-price": "25.0",
+            "celling-price": "27.5",
+            "floor-price": "22.5",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "THT",
+            "reference-price": "14.5",
+            "celling-price": "15.9",
+            "floor-price": "13.1",
+            "max-price": "14.9",
+            "min-rice": "14.5",
+            "average-price": "14.6"
+        },
+        {
+            "stock-code": "TIG",
+            "reference-price": "19.0",
+            "celling-price": "20.9",
+            "floor-price": "17.1",
+            "max-price": "19.1",
+            "min-rice": "18.6",
+            "average-price": "18.9"
+        },
+        {
+            "stock-code": "TJC",
+            "reference-price": "14.6",
+            "celling-price": "16.0",
+            "floor-price": "13.2",
+            "max-price": "16.0",
+            "min-rice": "14.7",
+            "average-price": "15.9"
+        },
+        {
+            "stock-code": "TKC",
+            "reference-price": "11.9",
+            "celling-price": "13.0",
+            "floor-price": "10.8",
+            "max-price": "11.9",
+            "min-rice": "11.0",
+            "average-price": "11.1"
+        },
+        {
+            "stock-code": "TKU",
+            "reference-price": "36.9",
+            "celling-price": "40.5",
+            "floor-price": "33.3",
+            "max-price": "34.7",
+            "min-rice": "34.7",
+            "average-price": ""
+        },
+        {
+            "stock-code": "TMB",
+            "reference-price": "20.0",
+            "celling-price": "22.0",
+            "floor-price": "18.0",
+            "max-price": "20.7",
+            "min-rice": "19.6",
+            "average-price": "19.8"
+        },
+        {
+            "stock-code": "TMC",
+            "reference-price": "11.8",
+            "celling-price": "12.9",
+            "floor-price": "10.7",
+            "max-price": "12.0",
+            "min-rice": "11.9",
+            "average-price": "12.0"
+        },
+        {
+            "stock-code": "TMX",
+            "reference-price": "12.0",
+            "celling-price": "13.2",
+            "floor-price": "10.8",
+            "max-price": "13.2",
+            "min-rice": "11.5",
+            "average-price": "12.1"
+        },
+        {
+            "stock-code": "TNG",
+            "reference-price": "31.5",
+            "celling-price": "34.6",
+            "floor-price": "28.4",
+            "max-price": "33.8",
+            "min-rice": "31.6",
+            "average-price": "33.0"
+        },
+        {
+            "stock-code": "TPH",
+            "reference-price": "11.4",
+            "celling-price": "12.5",
+            "floor-price": "10.3",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "TPP",
+            "reference-price": "12.9",
+            "celling-price": "14.1",
+            "floor-price": "11.7",
+            "max-price": "12.9",
+            "min-rice": "12.9",
+            "average-price": "12.9"
+        },
+        {
+            "stock-code": "TSB",
+            "reference-price": "11.5",
+            "celling-price": "12.6",
+            "floor-price": "10.4",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "TST",
+            "reference-price": "11.0",
+            "celling-price": "12.1",
+            "floor-price": "9.9",
+            "max-price": "11.1",
+            "min-rice": "11.1",
+            "average-price": "11.1"
+        },
+        {
+            "stock-code": "TTC",
+            "reference-price": "17.0",
+            "celling-price": "18.7",
+            "floor-price": "15.3",
+            "max-price": "16.4",
+            "min-rice": "16.4",
+            "average-price": "16.4"
+        },
+        {
+            "stock-code": "TTH",
+            "reference-price": "6.0",
+            "celling-price": "6.6",
+            "floor-price": "5.4",
+            "max-price": "6.1",
+            "min-rice": "5.9",
+            "average-price": "6.0"
+        },
+        {
+            "stock-code": "TTL",
+            "reference-price": "10.6",
+            "celling-price": "11.6",
+            "floor-price": "9.6",
+            "max-price": "11.6",
+            "min-rice": "11.0",
+            "average-price": "11.5"
+        },
+        {
+            "stock-code": "TTT",
+            "reference-price": "46.0",
+            "celling-price": "50.6",
+            "floor-price": "41.4",
+            "max-price": "45.0",
+            "min-rice": "44.5",
+            "average-price": "44.7"
+        },
+        {
+            "stock-code": "TTZ",
+            "reference-price": "6.0",
+            "celling-price": "6.6",
+            "floor-price": "5.4",
+            "max-price": "5.9",
+            "min-rice": "5.7",
+            "average-price": "5.8"
+        },
+        {
+            "stock-code": "TV3",
+            "reference-price": "18.1",
+            "celling-price": "19.9",
+            "floor-price": "16.3",
+            "max-price": "18.2",
+            "min-rice": "17.9",
+            "average-price": "18.0"
+        },
+        {
+            "stock-code": "TV4",
+            "reference-price": "17.8",
+            "celling-price": "19.5",
+            "floor-price": "16.1",
+            "max-price": "17.8",
+            "min-rice": "17.3",
+            "average-price": "17.5"
+        },
+        {
+            "stock-code": "TVC",
+            "reference-price": "21.7",
+            "celling-price": "23.8",
+            "floor-price": "19.6",
+            "max-price": "22.1",
+            "min-rice": "21.1",
+            "average-price": "21.6"
+        },
+        {
+            "stock-code": "TVD",
+            "reference-price": "14.5",
+            "celling-price": "15.9",
+            "floor-price": "13.1",
+            "max-price": "14.8",
+            "min-rice": "14.5",
+            "average-price": "14.6"
+        },
+        {
+            "stock-code": "TXM",
+            "reference-price": "7.5",
+            "celling-price": "8.2",
+            "floor-price": "6.8",
+            "max-price": "7.6",
+            "min-rice": "7.3",
+            "average-price": "7.5"
+        },
+        {
+            "stock-code": "UNI",
+            "reference-price": "13.3",
+            "celling-price": "14.6",
+            "floor-price": "12.0",
+            "max-price": "14.0",
+            "min-rice": "12.6",
+            "average-price": "12.7"
+        },
+        {
+            "stock-code": "V12",
+            "reference-price": "18.8",
+            "celling-price": "20.6",
+            "floor-price": "17.0",
+            "max-price": "18.4",
+            "min-rice": "17.0",
+            "average-price": "17.8"
+        },
+        {
+            "stock-code": "V21",
+            "reference-price": "14.0",
+            "celling-price": "15.4",
+            "floor-price": "12.6",
+            "max-price": "14.6",
+            "min-rice": "14.1",
+            "average-price": "14.4"
+        },
+        {
+            "stock-code": "VAT",
+            "reference-price": "2.4",
+            "celling-price": "2.6",
+            "floor-price": "2.2",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "VBC",
+            "reference-price": "23.5",
+            "celling-price": "25.8",
+            "floor-price": "21.2",
+            "max-price": "23.5",
+            "min-rice": "22.8",
+            "average-price": "23.0"
+        },
+        {
+            "stock-code": "VC1",
+            "reference-price": "13.2",
+            "celling-price": "14.5",
+            "floor-price": "11.9",
+            "max-price": "14.0",
+            "min-rice": "13.2",
+            "average-price": "13.2"
+        },
+        {
+            "stock-code": "VC2",
+            "reference-price": "49.3",
+            "celling-price": "54.2",
+            "floor-price": "44.4",
+            "max-price": "50.0",
+            "min-rice": "48.5",
+            "average-price": "49.4"
+        },
+        {
+            "stock-code": "VC3",
+            "reference-price": "42.5",
+            "celling-price": "46.7",
+            "floor-price": "38.3",
+            "max-price": "43.8",
+            "min-rice": "41.5",
+            "average-price": "43.1"
+        },
+        {
+            "stock-code": "VC6",
+            "reference-price": "9.5",
+            "celling-price": "10.4",
+            "floor-price": "8.6",
+            "max-price": "10.0",
+            "min-rice": "9.5",
+            "average-price": "9.8"
+        },
+        {
+            "stock-code": "VC7",
+            "reference-price": "27.4",
+            "celling-price": "30.1",
+            "floor-price": "24.7",
+            "max-price": "29.7",
+            "min-rice": "28.0",
+            "average-price": "28.8"
+        },
+        {
+            "stock-code": "VC9",
+            "reference-price": "10.5",
+            "celling-price": "11.5",
+            "floor-price": "9.5",
+            "max-price": "10.6",
+            "min-rice": "9.5",
+            "average-price": "10.0"
+        },
+        {
+            "stock-code": "VCC",
+            "reference-price": "28.5",
+            "celling-price": "31.3",
+            "floor-price": "25.7",
+            "max-price": "28.6",
+            "min-rice": "27.5",
+            "average-price": "28.2"
+        },
+        {
+            "stock-code": "VCM",
+            "reference-price": "17.9",
+            "celling-price": "19.6",
+            "floor-price": "16.2",
+            "max-price": "17.8",
+            "min-rice": "16.5",
+            "average-price": "16.7"
+        },
+        {
+            "stock-code": "VCS",
+            "reference-price": "121.8",
+            "celling-price": "133.9",
+            "floor-price": "109.7",
+            "max-price": "124.8",
+            "min-rice": "121.8",
+            "average-price": "122.8"
+        },
+        {
+            "stock-code": "VDL",
+            "reference-price": "21.1",
+            "celling-price": "23.2",
+            "floor-price": "19.0",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "VE1",
+            "reference-price": "6.3",
+            "celling-price": "6.9",
+            "floor-price": "5.7",
+            "max-price": "6.3",
+            "min-rice": "6.1",
+            "average-price": "6.2"
+        },
+        {
+            "stock-code": "VE2",
+            "reference-price": "13.0",
+            "celling-price": "14.3",
+            "floor-price": "11.7",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "VE3",
+            "reference-price": "11.5",
+            "celling-price": "12.6",
+            "floor-price": "10.4",
+            "max-price": "12.3",
+            "min-rice": "11.0",
+            "average-price": "11.5"
+        },
+        {
+            "stock-code": "VE4",
+            "reference-price": "48.0",
+            "celling-price": "52.8",
+            "floor-price": "43.2",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "VE8",
+            "reference-price": "11.1",
+            "celling-price": "12.2",
+            "floor-price": "10.0",
+            "max-price": "10.9",
+            "min-rice": "10.2",
+            "average-price": "10.5"
+        },
+        {
+            "stock-code": "VGP",
+            "reference-price": "36.0",
+            "celling-price": "39.6",
+            "floor-price": "32.4",
+            "max-price": "32.4",
+            "min-rice": "32.4",
+            "average-price": "32.4"
+        },
+        {
+            "stock-code": "VGS",
+            "reference-price": "41.4",
+            "celling-price": "45.5",
+            "floor-price": "37.3",
+            "max-price": "41.9",
+            "min-rice": "40.2",
+            "average-price": "41.2"
+        },
+        {
+            "stock-code": "VHE",
+            "reference-price": "9.0",
+            "celling-price": "9.9",
+            "floor-price": "8.1",
+            "max-price": "9.5",
+            "min-rice": "8.7",
+            "average-price": "9.0"
+        },
+        {
+            "stock-code": "VHL",
+            "reference-price": "25.2",
+            "celling-price": "27.7",
+            "floor-price": "22.7",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "VIE",
+            "reference-price": "5.4",
+            "celling-price": "5.9",
+            "floor-price": "4.9",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "VIF",
+            "reference-price": "20.0",
+            "celling-price": "22.0",
+            "floor-price": "18.0",
+            "max-price": "20.5",
+            "min-rice": "19.8",
+            "average-price": "20.0"
+        },
+        {
+            "stock-code": "VIG",
+            "reference-price": "9.9",
+            "celling-price": "10.8",
+            "floor-price": "9.0",
+            "max-price": "10.3",
+            "min-rice": "9.8",
+            "average-price": "9.9"
+        },
+        {
+            "stock-code": "VIT",
+            "reference-price": "16.8",
+            "celling-price": "18.4",
+            "floor-price": "15.2",
+            "max-price": "17.0",
+            "min-rice": "16.6",
+            "average-price": "16.9"
+        },
+        {
+            "stock-code": "VKC",
+            "reference-price": "13.9",
+            "celling-price": "15.2",
+            "floor-price": "12.6",
+            "max-price": "13.9",
+            "min-rice": "13.5",
+            "average-price": "13.7"
+        },
+        {
+            "stock-code": "VLA",
+            "reference-price": "22.3",
+            "celling-price": "24.5",
+            "floor-price": "20.1",
+            "max-price": "22.5",
+            "min-rice": "22.3",
+            "average-price": "22.5"
+        },
+        {
+            "stock-code": "VMC",
+            "reference-price": "13.0",
+            "celling-price": "14.3",
+            "floor-price": "11.7",
+            "max-price": "13.0",
+            "min-rice": "12.6",
+            "average-price": "12.7"
+        },
+        {
+            "stock-code": "VMS",
+            "reference-price": "13.3",
+            "celling-price": "14.6",
+            "floor-price": "12.0",
+            "max-price": "13.3",
+            "min-rice": "13.3",
+            "average-price": "13.3"
+        },
+        {
+            "stock-code": "VNC",
+            "reference-price": "35.6",
+            "celling-price": "39.1",
+            "floor-price": "32.1",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "VNF",
+            "reference-price": "20.7",
+            "celling-price": "22.7",
+            "floor-price": "18.7",
+            "max-price": "21.2",
+            "min-rice": "20.7",
+            "average-price": "20.8"
+        },
+        {
+            "stock-code": "VNR",
+            "reference-price": "36.5",
+            "celling-price": "40.1",
+            "floor-price": "32.9",
+            "max-price": "38.6",
+            "min-rice": "36.1",
+            "average-price": "36.9"
+        },
+        {
+            "stock-code": "VNT",
+            "reference-price": "61.8",
+            "celling-price": "67.9",
+            "floor-price": "55.7",
+            "max-price": "67.9",
+            "min-rice": "61.9",
+            "average-price": "67.4"
+        },
+        {
+            "stock-code": "VSA",
+            "reference-price": "31.8",
+            "celling-price": "34.9",
+            "floor-price": "28.7",
+            "max-price": "31.8",
+            "min-rice": "31.4",
+            "average-price": "31.5"
+        },
+        {
+            "stock-code": "VSM",
+            "reference-price": "27.0",
+            "celling-price": "29.7",
+            "floor-price": "24.3",
+            "max-price": "27.0",
+            "min-rice": "27.0",
+            "average-price": "27.0"
+        },
+        {
+            "stock-code": "VTC",
+            "reference-price": "16.0",
+            "celling-price": "17.6",
+            "floor-price": "14.4",
+            "max-price": "16.2",
+            "min-rice": "16.0",
+            "average-price": "16.1"
+        },
+        {
+            "stock-code": "VTH",
+            "reference-price": "9.2",
+            "celling-price": "10.1",
+            "floor-price": "8.3",
+            "max-price": "10.1",
+            "min-rice": "9.0",
+            "average-price": "9.8"
+        },
+        {
+            "stock-code": "VTJ",
+            "reference-price": "5.6",
+            "celling-price": "6.1",
+            "floor-price": "5.1",
+            "max-price": "6.1",
+            "min-rice": "5.3",
+            "average-price": "6.0"
+        },
+        {
+            "stock-code": "VTL",
+            "reference-price": "14.0",
+            "celling-price": "15.4",
+            "floor-price": "12.6",
+            "max-price": "13.9",
+            "min-rice": "12.6",
+            "average-price": "13.7"
+        },
+        {
+            "stock-code": "VTV",
+            "reference-price": "8.9",
+            "celling-price": "9.7",
+            "floor-price": "8.1",
+            "max-price": "9.7",
+            "min-rice": "8.9",
+            "average-price": "9.5"
+        },
+        {
+            "stock-code": "VXB",
+            "reference-price": "19.2",
+            "celling-price": "21.1",
+            "floor-price": "17.3",
+            "max-price": "21.1",
+            "min-rice": "20.8",
+            "average-price": "21.0"
+        },
+        {
+            "stock-code": "WCS",
+            "reference-price": "199.0",
+            "celling-price": "218.9",
+            "floor-price": "179.1",
+            "max-price": "",
+            "min-rice": "",
+            "average-price": ""
+        },
+        {
+            "stock-code": "WSS",
+            "reference-price": "12.2",
+            "celling-price": "13.4",
+            "floor-price": "11.0",
+            "max-price": "12.4",
+            "min-rice": "12.0",
+            "average-price": "12.2"
+        },
+        {
+            "stock-code": "X20",
+            "reference-price": "11.0",
+            "celling-price": "12.1",
+            "floor-price": "9.9",
+            "max-price": "11.0",
+            "min-rice": "10.8",
+            "average-price": "10.9"
         }
     ]
 }
