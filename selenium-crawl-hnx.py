@@ -27,7 +27,7 @@ def crawl_stock_data(section):
     Then put the data into the stock_list array
 
     Parameters:
-    section (int): Describe the name of the stock section like ABC, DEF, GHI, ...
+    section (String): A input string describes the name of the stock section like ABC, DEF, GHI, ...
 
     Returns:
     this function doesn't return anything
