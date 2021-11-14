@@ -26,7 +26,7 @@ After that, all data is exported into 2 file formats, json and csv.
 ## Implementation Guide
 
 Enviroment require: python. 
-- In wwindows, you can download an install python in `https://www.python.org/downloads/`
+- In wwindows, you can download an install python in [`https://www.python.org/downloads/`](https://www.python.org/downloads/)
 
 
 Libraries require: selenium, pandas, scrapy
@@ -38,6 +38,10 @@ Libraries require: selenium, pandas, scrapy
 - Turn on your terminal and `cd` into this folder `Python-crawl-data-tool.`
 - Run command on your terminal: `python selenium-crawl-hnx.py`
 - Data exports to 2 file: stock-hnx-csv.csv (csv format) and stock-hnx-csv.json (json format)
+
+If you want to read the documentation: 
+- In your terminal, direct to this folder, type: `python -m pydoc -w selenium-crawl-hnx.py`
+- documentation is exported to file `selenium-crawl-hnx.html`. You can watch on browser.
 
 
 ## License:
