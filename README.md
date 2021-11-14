@@ -21,7 +21,8 @@ After that, all data is exported into 2 file formats, json and csv.
 
 - Crawl stock data 
 - Export to file, json and csv format
-- Export documentation as html
+- Export documentation as html format
+- Log to file logging
 
 ## Implementation Guide
 
@@ -37,7 +38,7 @@ Libraries require: selenium, pandas, scrapy
 
 - Turn on your terminal and `cd` into this folder `Python-crawl-data-tool.`
 - Run command on your terminal: `python selenium-crawl-hnx.py`
-- Data exports to 2 file: stock-hnx-csv.csv (csv format) and stock-hnx-csv.json (json format)
+- Data exports to 2 file: `stock-hnx-csv.csv` (csv format) and `stock-hnx-csv.json` (json format)
 
 If you want to read the documentation: 
 - In your terminal, direct to this folder, type: `python -m pydoc -w selenium-crawl-hnx.py`
@@ -56,6 +57,6 @@ Version: 0.4 update on Nov 14, 2021
 
 # Author
 - Nguyễn Quang Hưng
-- Facebook: https://www.facebook.com/hungnq.SoICT/
+- Facebook: https://www.facebook.com/hungnq.SoICT
 - Email: nguyenquanghung.ktmt@gmail.com
 - LinkedIn: https://www.linkedin.com/in/hungnq-soict
