@@ -1,7 +1,7 @@
 # Python-crawl-data-tool
 
 ## Table of Contents
-- [Description](#cescription)
+- [Description](#description)
 - [Main features](#main-features)
 - [Implementation Guide](#implemention-guide)
 - [User Guide](#user-guide)
@@ -47,12 +47,13 @@ If you want to read the documentation:
 
 ## License:
 
-Copyright © 2021 Nguyen Quang Hung
+Copyright © 2021 by Nguyen Quang Hung
 
 
 ## Release: 
 
-Version: 0.4 update on Nov 14, 2021
+- Version 0.4 updated on Nov 14, 2021
+- Version 0.5 updated on Nov 21, 2021
 
 
 # Author
