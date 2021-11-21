@@ -28,12 +28,11 @@ smtp_handler = logging.handlers.SMTPHandler(mailhost=('smtp.gmail.com', 587),
                                             fromaddr='hungnguyenjr9@gmail.com',
                                             toaddrs=['hungnq.cdc@gmail.com',
                                                      'hung.nq183760@sis.hust.edu.vn'],
-                                            subject='Crash in Crawl Tool',
+                                            subject='Crash in Crawl-Data-Tool',
                                             credentials=(
                                                 'hungnguyenjr9@gmail.com',
                                                 'wlpgtalknxstpftp'),
-                                            secure=None,
-                                            timeout=1.0)
+                                            secure=())
 logger.addHandler(smtp_handler)
 
 # Create stock-list to contain the stock-object
