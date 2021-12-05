@@ -22,12 +22,13 @@ After that, all data is exported into 2 file formats, json and csv.
 - Crawl stock data 
 - Export to file, json and csv format
 - Export documentation as html format
+- Save data to mysql database
 - Log to file logging
 
 ## Implementation Guide
 
 Enviroment require: python. 
-- In wwindows, you can download an install python in [`https://www.python.org/downloads/`](https://www.python.org/downloads/)
+- In windows, you can download an install python in [`https://www.python.org/downloads/`](https://www.python.org/downloads/)
 
 
 Libraries require: selenium, pandas, scrapy
@@ -39,6 +40,7 @@ Libraries require: selenium, pandas, scrapy
 - Turn on your terminal and `cd` into this folder `Python-crawl-data-tool.`
 - Run command on your terminal: `python selenium-crawl-hnx.py`
 - Data exports to 2 file: `stock-hnx-csv.csv` (csv format) and `stock-hnx-csv.json` (json format)
+- Data is saved to `stock` mysql database
 
 If you want to read the documentation: 
 - In your terminal, direct to this folder, type: `python -m pydoc -w selenium-crawl-hnx.py`

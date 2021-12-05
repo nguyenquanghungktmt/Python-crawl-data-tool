@@ -4,12 +4,14 @@ Created on Oct 23, 2021
 @author: Nguyen Quang Hung
 '''
 
+from os import close
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from tqdm import tqdm
 import pandas as pd
 import json
 import logging, logging.handlers
+import connection_utils
 
 # Start
 print('Starting application ... \n')
@@ -97,7 +99,7 @@ def crawl_stock_data(driver, section):
                     'celling-price': cellingPrice,
                     'floor-price': floorPrice,
                     'max-price': maxPrice,
-                    'min-rice': minPrice,
+                    'min-price': minPrice,
                     'average-price': averagePrice,
                 }
 
@@ -183,6 +185,69 @@ def export_file(data):
         logger.error('Failed to export data to file as format csv')
 
 
+# Save to mysql database
+def save_database(stock_data):
+    
+    """
+    The function save all stock data that just been crawled to mysql database.
+
+    Parameters:
+    stock_data (list): A list data of stock codes and prices.
+
+    Returns:
+    this function doesn't return anything
+    
+    """
+
+    # Create a connection to database
+    connection = connection_utils.getConnection() 
+
+    print("Connect to database successful!")  
+    print("================================")
+
+    # Define sql query: select, insert, create
+    select_query = "SELECT * FROM stock_items WHERE code = %s "
+
+    insert_query =  "INSERT INTO stock_items (code, reference_price, celling_price, floor_price, max_price, min_price, average_price) " \
+        + " VALUES (%s, %s, %s, %s, %s, %s, %s) " 
+
+    update_query = "UPDATE stock_items SET reference_price = %s, celling_price = %s, floor_price = %s, max_price = %s, min_price = %s, average_price = %s WHERE code = %s " 
+
+
+    try :
+        # create a new cursor object using the connection
+        cursor = connection.cursor()
+
+        for item in stock_data:
+            stockCode = item['stock-code']
+
+            # execute
+            if not ( cursor.execute(select_query, stockCode)) :
+                # there are no record that has stock code in database
+                # insert stock item to database
+
+                cursor.execute(insert_query, (stockCode, item['reference-price'], item['celling-price'] , item['floor-price'], item['max-price'], item['min-price'], item['average-price'] ))
+
+                print(f"Successful Insert {stockCode}")
+            else:
+                cursor.execute(update_query, (stockCode, item['reference-price'], item['celling-price'] , item['floor-price'], item['max-price'], item['min-price'], item['average-price'] )) 
+
+                print(f"Successful Update {stockCode}")
+
+        # Commit any pending transaction to the database
+        connection.commit()  
+
+    except:
+        print('Error to save data tp database')
+        logger.error('Error to save data tp database')
+
+    finally: 
+        # Close the connection to database now 
+        connection.close()
+
+        print('Complete save data to database\n')
+
+
 # main
 def main():
     try:
@@ -232,3 +297,4 @@ def main():
 if __name__ == '__main__':
     main()
     export_file(stock_list)
+    save_database(stock_list)
