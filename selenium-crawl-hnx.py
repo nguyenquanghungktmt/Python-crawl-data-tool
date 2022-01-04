@@ -12,6 +12,7 @@ import pandas as pd
 import json
 import logging, logging.handlers
 import connection_utils
+import datetime
 
 # Start
 print('Starting application ... \n')
@@ -85,12 +86,16 @@ def crawl_stock_data(driver, section):
                     continue
 
                 # Get the stock prices
-                referencePrice = item.find_element(By.XPATH, './/td[4]/div').text
-                cellingPrice = item.find_element(By.XPATH, './/td[5]/div').text
-                floorPrice = item.find_element(By.XPATH, './/td[6]/div').text
-                maxPrice = item.find_element(By.XPATH, './/td[26]/div').text
-                minPrice = item.find_element(By.XPATH, './/td[27]/div').text
-                averagePrice = item.find_element(By.XPATH, './/td[28]/div').text
+                referencePrice = item.find_element(By.XPATH, './/td[4]/div').text.replace(",","")
+                cellingPrice = item.find_element(By.XPATH, './/td[5]/div').text.replace(",","")
+                floorPrice = item.find_element(By.XPATH, './/td[6]/div').text.replace(",","")
+                price = item.find_element(By.XPATH, './/td[14]/div').text.replace(",","")
+                volume = item.find_element(By.XPATH, './/td[15]/div').text.replace(",","")
+                totalVolume = item.find_element(By.XPATH, './/td[16]/div').text.replace(",","")
+                totalValue = item.find_element(By.XPATH, './/td[17]/div').text.replace(",","")
+                highestPrice = item.find_element(By.XPATH, './/td[26]/div').text.replace(",","")
+                lowerPrice = item.find_element(By.XPATH, './/td[27]/div').text.replace(",","")
+                averagePrice = item.find_element(By.XPATH, './/td[28]/div').text.replace(",","")
 
                 # Create element that contains stock information: code, prices
                 stock_item = {
@@ -98,8 +103,12 @@ def crawl_stock_data(driver, section):
                     'reference-price': referencePrice,
                     'celling-price': cellingPrice,
                     'floor-price': floorPrice,
-                    'max-price': maxPrice,
-                    'min-price': minPrice,
+                    'price': price,
+                    'volume': volume,
+                    'total-volume': totalVolume,
+                    'total-value': totalValue,
+                    'highest-price': highestPrice,
+                    'lowest-price': lowerPrice,
                     'average-price': averagePrice,
                 }
 
@@ -145,6 +154,8 @@ def export_file(data):
     this function doesn't return anything
     
     """
+
+    print('\n______________________ SAVE DATA TO FILE ______________________')
 
     # Convert stock-list (type: list) to type dictionary. 
     stock_dict = {'data' : data}
@@ -199,19 +210,23 @@ def save_database(stock_data):
     
     """
 
+    print('\n______________________ SAVE DATA TO DATABASE ______________________')
+
     # Create a connection to database
-    connection = connection_utils.getConnection() 
+    try:
+        connection = connection_utils.getConnection() 
+    except:
+        print("Failed connect to database! Please check and try again.") 
+        return
 
     print("Connect to database successful!")  
-    print("================================")
 
     # Define sql query: select, insert, create
-    select_query = "SELECT * FROM stock_items WHERE code = %s "
+    select_query = "SELECT * FROM stock WHERE code = %s "
 
-    insert_query =  "INSERT INTO stock_items (code, reference_price, celling_price, floor_price, max_price, min_price, average_price) " \
-        + " VALUES (%s, %s, %s, %s, %s, %s, %s) " 
+    insert_query =  "INSERT INTO stock (code, reference_price, celling_price, floor_price, price, volume, total_volume, total_value, highest_price, lowest_price, average_price, created_at, updated_at) " + " VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) " 
 
-    update_query = "UPDATE stock_items SET reference_price = %s, celling_price = %s, floor_price = %s, max_price = %s, min_price = %s, average_price = %s WHERE code = %s " 
+    update_query = "UPDATE stock SET reference_price = %s, celling_price = %s, floor_price = %s, price = %s, volume = %s, total_volume = %s, total_value = %s, highest_price = %s, lowest_price = %s, average_price = %s, updated_at = %s WHERE code = %s " 
 
 
     try :
@@ -226,26 +241,32 @@ def save_database(stock_data):
                 # there are no record that has stock code in database
                 # insert stock item to database
 
-                cursor.execute(insert_query, (stockCode, item['reference-price'], item['celling-price'] , item['floor-price'], item['max-price'], item['min-price'], item['average-price'] ))
+                date_time_now = datetime.datetime.now()
 
-                print(f"Successful Insert {stockCode}")
+                cursor.execute(insert_query, (stockCode, item['reference-price'], item['celling-price'], item['floor-price'], item['price'] , item['volume'] , item['total-volume'] , item['total-value'], item['highest-price'], item['lowest-price'], item['average-price'], date_time_now, date_time_now ))
+
+                # print(f"Successful Insert {stockCode}")
             else:
-                cursor.execute(update_query, (stockCode, item['reference-price'], item['celling-price'] , item['floor-price'], item['max-price'], item['min-price'], item['average-price'] )) 
+                # update stock item to database
 
-                print(f"Successful Update {stockCode}")
+                date_time_now = datetime.datetime.now()
+
+                cursor.execute(update_query, (item['reference-price'], item['celling-price'] , item['floor-price'],  item['price'], item['volume'], item['total-volume'], item['total-value'], item['highest-price'], item['lowest-price'], item['average-price'], date_time_now, stockCode )) 
+
+                # print(f"Successful Update {stockCode}")
 
         # Commit any pending transaction to the database
         connection.commit()  
 
+        print('Complete to save data to database.\n')
+
     except:
-        print('Error to save data tp database')
-        logger.error('Error to save data tp database')
+        print('Error to save data to database')
+        logger.error('Error to save data to database')
 
     finally: 
         # Close the connection to database now 
         connection.close()
-
-        print('Complete save data to database\n')
 
 
 # main
@@ -276,6 +297,8 @@ def main():
 
         # shutdown app
         exit(0)
+        
+    print('\n______________________ CRAWL DATA ______________________')
 
     # call crawl_stock_data function to start crawling data from stock sections
     crawl_stock_data(driver, 'ABC')
@@ -288,8 +311,8 @@ def main():
     crawl_stock_data(driver, 'WXYZ')
 
     # Finishing crawl data. Print the total number of stocks
-    print('\n======================================')
     print('Completed. We have crawled', len(stock_list),'stocks')
+    print('======================================')
     # close web browser
     driver.close()
 
