@@ -57,6 +57,7 @@ Copyright © 2021 by Nguyen Quang Hung
 - Version 0.4 updated on Nov 14, 2021
 - Version 0.5 updated on Nov 21, 2021
 - Version 0.6 updated on Dec 5, 2021
+- Version 0.7 updated on Jan 7, 2021
 
 
 # Author

@@ -4,7 +4,7 @@ Created on Oct 23, 2021
 @author: Nguyen Quang Hung
 '''
 
-from os import close
+from os import error
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from tqdm import tqdm
@@ -71,7 +71,7 @@ def crawl_stock_data(driver, section):
         items = driver.find_elements(By.CLASS_NAME, 'trChange')
 
         # Notice to user
-        print(f'Crawl {len(items)} stock items in {section} section')
+        print(f'Crawl {len(items)} items in {section} section')
 
         # log to logging file
         # logger.info(f'Crawl {len(items)} stock items in {section} section')
@@ -87,15 +87,55 @@ def crawl_stock_data(driver, section):
 
                 # Get the stock prices
                 referencePrice = item.find_element(By.XPATH, './/td[4]/div').text.replace(",","")
+                if not referencePrice:
+                    referencePrice = 0
+
                 cellingPrice = item.find_element(By.XPATH, './/td[5]/div').text.replace(",","")
+                if not cellingPrice:
+                    cellingPrice = 0
+
                 floorPrice = item.find_element(By.XPATH, './/td[6]/div').text.replace(",","")
+                if not floorPrice:
+                    floorPrice = 0
+
                 price = item.find_element(By.XPATH, './/td[14]/div').text.replace(",","")
+                if not price:
+                    price = 0
+
                 volume = item.find_element(By.XPATH, './/td[15]/div').text.replace(",","")
+                if not volume:
+                    volume = 0
+
                 totalVolume = item.find_element(By.XPATH, './/td[16]/div').text.replace(",","")
+                if not totalVolume:
+                    totalVolume = 0
+
                 totalValue = item.find_element(By.XPATH, './/td[17]/div').text.replace(",","")
+                if not totalValue:
+                    totalValue = 0
+
                 highestPrice = item.find_element(By.XPATH, './/td[26]/div').text.replace(",","")
+                if not highestPrice:
+                    highestPrice = 0
+
                 lowerPrice = item.find_element(By.XPATH, './/td[27]/div').text.replace(",","")
+                if not lowerPrice:
+                    lowerPrice = 0
+
                 averagePrice = item.find_element(By.XPATH, './/td[28]/div').text.replace(",","")
+                if not averagePrice:
+                    averagePrice = 0
+
+                referencePrice = float(referencePrice)
+                cellingPrice = float(cellingPrice)
+                floorPrice = float(floorPrice)
+                price = float(price)
+                volume = float(volume)
+                totalVolume = float(totalVolume)
+                totalValue = int(totalValue)
+                highestPrice = float(highestPrice)
+                lowerPrice = float(lowerPrice)
+                averagePrice = float(averagePrice)
 
                 # Create element that contains stock information: code, prices
                 stock_item = {
@@ -120,7 +160,7 @@ def crawl_stock_data(driver, section):
             
             except:
                 # There has some wrong with crawling data
-                print(f'Opps! Something wrong when crawling a stock in {section} section')
+                print(f'Opps! Something wrong when crawling a stock in {section} section.\n')
 
                 # log this error
                 logger.error(f'Failed to crawl a stock in {section} section')
@@ -131,10 +171,10 @@ def crawl_stock_data(driver, section):
 
     except:
         # There has some wrong when start crawling in this section
-        print(f'Opps! something wrong in {section} section')
+        print(f'Opps! Failed in {section} section.\n')
 
         # log this error to logging file
-        logger.error(f'Failed in {section} section')
+        logger.error(f'Failed in {section} section.')
         return
 
     # End function
@@ -192,12 +232,12 @@ def export_file(data):
         # logger.info('Success to export data to file as format csv')
 
     except:
-        print('Cannot export data to csv file')
+        print('Cannot export data to csv file.\n')
         logger.error('Failed to export data to file as format csv')
 
 
 # Save to mysql database
-def save_database(stock_data):
+def save_database(stock_list):
     
     """
     The function save all stock data that just been crawled to mysql database.
@@ -222,51 +262,62 @@ def save_database(stock_data):
     print("Connect to database successful!")  
 
     # Define sql query: select, insert, create
-    select_query = "SELECT * FROM stock WHERE code = %s "
+    select_query = "SELECT * FROM vnindex.stock WHERE code = %s "
 
-    insert_query =  "INSERT INTO stock (code, reference_price, celling_price, floor_price, price, volume, total_volume, total_value, highest_price, lowest_price, average_price, created_at, updated_at) " + " VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) " 
+    insert_query =  "INSERT INTO vnindex.stock (code, reference_price, celling_price, floor_price, price, volume, total_volume, total_value, highest_price, lowest_price, average_price, created_at, updated_at) " + " VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) " 
 
-    update_query = "UPDATE stock SET reference_price = %s, celling_price = %s, floor_price = %s, price = %s, volume = %s, total_volume = %s, total_value = %s, highest_price = %s, lowest_price = %s, average_price = %s, updated_at = %s WHERE code = %s " 
+    update_query = "UPDATE vnindex.stock SET reference_price = %s, celling_price = %s, floor_price = %s, price = %s, volume = %s, total_volume = %s, total_value = %s, highest_price = %s, lowest_price = %s, average_price = %s, updated_at = %s WHERE code = %s " 
 
 
     try :
         # create a new cursor object using the connection
         cursor = connection.cursor()
 
-        for item in stock_data:
+
+        print('Save data to database.')
+        for item in tqdm(stock_list):
             stockCode = item['stock-code']
 
-            # execute
-            if not ( cursor.execute(select_query, stockCode)) :
-                # there are no record that has stock code in database
-                # insert stock item to database
+            try:
+                # execute
+                if not ( cursor.execute(select_query, stockCode)) :
+                    # there are no record that has stock code in database
+                    # insert stock item to database
 
-                date_time_now = datetime.datetime.now()
+                    date_time_now = datetime.datetime.now()
 
-                cursor.execute(insert_query, (stockCode, item['reference-price'], item['celling-price'], item['floor-price'], item['price'] , item['volume'] , item['total-volume'] , item['total-value'], item['highest-price'], item['lowest-price'], item['average-price'], date_time_now, date_time_now ))
+                    cursor.execute(insert_query, (stockCode, item['reference-price'], item['celling-price'], item['floor-price'], item['price'] , item['volume'] , item['total-volume'] , item['total-value'], item['highest-price'], item['lowest-price'], item['average-price'], date_time_now, date_time_now ))
 
-                # print(f"Successful Insert {stockCode}")
-            else:
-                # update stock item to database
+            
+                    # print(f"Successful Insert {stockCode}")
+                else:
+                    # update stock item to database
 
-                date_time_now = datetime.datetime.now()
+                    date_time_now = datetime.datetime.now()
 
-                cursor.execute(update_query, (item['reference-price'], item['celling-price'] , item['floor-price'],  item['price'], item['volume'], item['total-volume'], item['total-value'], item['highest-price'], item['lowest-price'], item['average-price'], date_time_now, stockCode )) 
+                    cursor.execute(update_query, (item['reference-price'], item['celling-price'] , item['floor-price'],  item['price'], item['volume'], item['total-volume'], item['total-value'], item['highest-price'], item['lowest-price'], item['average-price'], date_time_now, stockCode )) 
 
-                # print(f"Successful Update {stockCode}")
+                    # print(f"Successful Update {stockCode}")
 
-        # Commit any pending transaction to the database
-        connection.commit()  
+                # Commit any pending transaction to the database
+                connection.commit()  
+            
+            except error as e:
+                print("Error in " + stockCode + ", erorr = " + e)
+                return
 
-        print('Complete to save data to database.\n')
+        cursor.close()
 
-    except:
-        print('Error to save data to database')
-        logger.error('Error to save data to database')
+        print('Complete!')
+
+    except error as e:
+        print("Error while connecting to MySQL", e)
+        logger.error("Error while connecting to MySQL", e)
 
     finally: 
         # Close the connection to database now 
         connection.close()
+        print("MySQL connection is closed\n")
 
 
 # main

@@ -14,10 +14,10 @@ def getConnection():
     """
 
     # create connection to database with host, username, password, database
-    connection = pymysql.connect(host='127.0.0.1',
-                                 user='admin',
-                                 password='123456',                             
-                                 db='stosck',
+    connection = pymysql.connect(host='sinno.soict.ai',
+                                 user='nguyenquanghung111',
+                                 password='20183760',
+                                 db='vnindex',
                                  charset='utf8mb4',
                                  cursorclass=pymysql.cursors.DictCursor)
     return connection
