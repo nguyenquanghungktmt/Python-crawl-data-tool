@@ -13,12 +13,7 @@ import json
 import logging, logging.handlers
 import connection_utils
 import datetime
-
-# Start
-print('Starting application ... \n')
-
-# create a url variable that is the website link that needs to crawl
-url = 'https://banggia.hnx.vn'    
+  
 
 # declare logging
 logging.basicConfig(level=logging.DEBUG, filename='crawl-stock-hnx.log', format='%(asctime)s %(levelname)s:%(message)s')
@@ -31,16 +26,12 @@ smtp_handler = logging.handlers.SMTPHandler(mailhost=('smtp.gmail.com', 587),
                                             fromaddr='hungnguyenjr9@gmail.com',
                                             toaddrs=['hungnq.cdc@gmail.com',
                                                      'hung.nq183760@sis.hust.edu.vn'],
-                                            subject='Crash in Crawl-Data-Tool',
+                                            subject='Error in Crawl-Data-Tool',
                                             credentials=(
                                                 'hungnguyenjr9@gmail.com',
                                                 'wlpgtalknxstpftp'),
                                             secure=())
 logger.addHandler(smtp_handler)
-
-# Create stock-list to contain the stock-object
-# Each item contains infomation of 1 stock like code, prices
-stock_list = []
 
 
 def crawl_stock_data(driver, section):
@@ -60,122 +51,113 @@ def crawl_stock_data(driver, section):
     # Create xpath to selenium click event
     xpath = '//div[@id="' + section +'"]/p'
 
-    try:
 
-        # Call selenium function to click on button on browser
-        driver.find_element(By.XPATH, xpath).click()
-        driver.implicitly_wait(10)
+    # Call selenium function to click on button on browser
+    driver.find_element(By.XPATH, xpath).click()
+    driver.implicitly_wait(10)
 
-        # Call selenium function to fill all elements that have style "trChange"
-        # Each element corresponds to a line describing a stock
-        items = driver.find_elements(By.CLASS_NAME, 'trChange')
+    # Call selenium function to fill all elements that have style "trChange"
+    # Each element corresponds to a line describing a stock
+    items = driver.find_elements(By.XPATH, '//div/table/tbody/tr')
 
-        # Notice to user
-        print(f'Crawl {len(items)} items in {section} section')
+    # Notice to user
+    print(f'Crawl {len(items)} items in {section} section')
 
-        # log to logging file
-        # logger.info(f'Crawl {len(items)} stock items in {section} section')
+    # log to logging file
+    # logger.info(f'Crawl {len(items)} stock items in {section} section')
 
-        for item in tqdm(items):
-            try:
-                # Get the stock code
-                stockCode = item.find_element(By.XPATH, './/td/div/div/span').text
+    for item in tqdm(items):
+        try:
+            # Get the stock code
+            stockCode = item.find_element(By.XPATH, './/td/div/div/span').text
 
-                # If can't get the code for some reason, skip this iteration
-                if not stockCode:
-                    continue
-
-                # Get the stock prices
-                referencePrice = item.find_element(By.XPATH, './/td[4]/div').text.replace(",","")
-                if not referencePrice:
-                    referencePrice = 0
-
-                cellingPrice = item.find_element(By.XPATH, './/td[5]/div').text.replace(",","")
-                if not cellingPrice:
-                    cellingPrice = 0
-
-                floorPrice = item.find_element(By.XPATH, './/td[6]/div').text.replace(",","")
-                if not floorPrice:
-                    floorPrice = 0
-
-                price = item.find_element(By.XPATH, './/td[14]/div').text.replace(",","")
-                if not price:
-                    price = 0
-
-                volume = item.find_element(By.XPATH, './/td[15]/div').text.replace(",","")
-                if not volume:
-                    volume = 0
-
-                totalVolume = item.find_element(By.XPATH, './/td[16]/div').text.replace(",","")
-                if not totalVolume:
-                    totalVolume = 0
-
-                totalValue = item.find_element(By.XPATH, './/td[17]/div').text.replace(",","")
-                if not totalValue:
-                    totalValue = 0
-
-                highestPrice = item.find_element(By.XPATH, './/td[26]/div').text.replace(",","")
-                if not highestPrice:
-                    highestPrice = 0
-
-                lowerPrice = item.find_element(By.XPATH, './/td[27]/div').text.replace(",","")
-                if not lowerPrice:
-                    lowerPrice = 0
-
-                averagePrice = item.find_element(By.XPATH, './/td[28]/div').text.replace(",","")
-                if not averagePrice:
-                    averagePrice = 0
-
-                referencePrice = float(referencePrice)
-                cellingPrice = float(cellingPrice)
-                floorPrice = float(floorPrice)
-                price = float(price)
-                volume = float(volume)
-                totalVolume = float(totalVolume)
-                totalValue = int(totalValue)
-                highestPrice = float(highestPrice)
-                lowerPrice = float(lowerPrice)
-                averagePrice = float(averagePrice)
-
-                # Create element that contains stock information: code, prices
-                stock_item = {
-                    'stock-code': stockCode,
-                    'reference-price': referencePrice,
-                    'celling-price': cellingPrice,
-                    'floor-price': floorPrice,
-                    'price': price,
-                    'volume': volume,
-                    'total-volume': totalVolume,
-                    'total-value': totalValue,
-                    'highest-price': highestPrice,
-                    'lowest-price': lowerPrice,
-                    'average-price': averagePrice,
-                }
-
-                # push that element to the last of the stock item list
-                stock_list.append(stock_item)
-
-                # log to logging file
-                # logger.info(f'Success to get stock: {stockCode}')
-            
-            except:
-                # There has some wrong with crawling data
-                print(f'Opps! Something wrong when crawling a stock in {section} section.\n')
-
-                # log this error
-                logger.error(f'Failed to crawl a stock in {section} section')
-
+            # If can't get the code for some reason, skip this iteration
+            if not stockCode:
                 continue
 
-            # end loop
+            # Get the stock prices
+            referencePrice = item.find_element(By.XPATH, './/td[4]/div').text.replace(",","")
+            if not referencePrice:
+                referencePrice = 0
 
-    except:
-        # There has some wrong when start crawling in this section
-        print(f'Opps! Failed in {section} section.\n')
+            cellingPrice = item.find_element(By.XPATH, './/td[5]/div').text.replace(",","")
+            if not cellingPrice:
+                cellingPrice = 0
 
-        # log this error to logging file
-        logger.error(f'Failed in {section} section.')
-        return
+            floorPrice = item.find_element(By.XPATH, './/td[6]/div').text.replace(",","")
+            if not floorPrice:
+                floorPrice = 0
+
+            price = item.find_element(By.XPATH, './/td[14]/div').text.replace(",","")
+            if not price:
+                price = 0
+
+            volume = item.find_element(By.XPATH, './/td[15]/div').text.replace(",","")
+            if not volume:
+                volume = 0
+
+            totalVolume = item.find_element(By.XPATH, './/td[16]/div').text.replace(",","")
+            if not totalVolume:
+                totalVolume = 0
+
+            totalValue = item.find_element(By.XPATH, './/td[17]/div').text.replace(",","")
+            if not totalValue:
+                totalValue = 0
+
+            highestPrice = item.find_element(By.XPATH, './/td[26]/div').text.replace(",","")
+            if not highestPrice:
+                highestPrice = 0
+
+            lowerPrice = item.find_element(By.XPATH, './/td[27]/div').text.replace(",","")
+            if not lowerPrice:
+                lowerPrice = 0
+
+            averagePrice = item.find_element(By.XPATH, './/td[28]/div').text.replace(",","")
+            if not averagePrice:
+                averagePrice = 0
+
+            referencePrice = float(referencePrice)
+            cellingPrice = float(cellingPrice)
+            floorPrice = float(floorPrice)
+            price = float(price)
+            volume = float(volume)
+            totalVolume = float(totalVolume)
+            totalValue = int(totalValue)
+            highestPrice = float(highestPrice)
+            lowerPrice = float(lowerPrice)
+            averagePrice = float(averagePrice)
+
+            # Create element that contains stock information: code, prices
+            stock_item = {
+                'stock-code': stockCode,
+                'reference-price': referencePrice,
+                'celling-price': cellingPrice,
+                'floor-price': floorPrice,
+                'price': price,
+                'volume': volume,
+                'total-volume': totalVolume,
+                'total-value': totalValue,
+                'highest-price': highestPrice,
+                'lowest-price': lowerPrice,
+                'average-price': averagePrice,
+            }
+
+            # push that element to the last of the stock item list
+            stock_list.append(stock_item)
+
+            # log to logging file
+            # logger.info(f'Success to get stock: {stockCode}')
+        
+        except:
+            # There has some wrong with crawling data
+            print(f'Error! Failed crawling a stock in {section} section.\n')
+
+            # log this error
+            logger.error(f'Failed to crawl a stock in {section} section')
+
+            return
+
+        # end loop
 
     # End function
     print('Done!\n')
@@ -185,7 +167,7 @@ def crawl_stock_data(driver, section):
 def export_file(data):
 
     """
-    The function takes 1 input parameter of stock data in an array, from which to export the data to json and csv format.
+    The function takes 1 input parameter of stock data in an array, from which to export the data to csv format.
 
     Parameters:
     data (list): A list data of stock codes and prices.
@@ -197,31 +179,6 @@ def export_file(data):
 
     print('\n______________________ SAVE DATA TO FILE ______________________')
 
-    # Convert stock-list (type: list) to type dictionary. 
-    stock_dict = {'data' : data}
-
-    # Create json from stock dictionary
-    stock_json = json.dumps(stock_dict, indent=4)
-
-    # write data to file as json format
-    try:
-
-        fw = open('stock-hnx-json.json', 'w')  # Open file and clear recent data of file
-        fw.write(stock_json) 
-        fw.close()   # Close file
-
-        print("Exported data to file json")
-
-        # log this step to file log
-        # logger.info('Success to export data to file as format json')
-
-    except:
-        print('Cannot open or write data to json file')
-
-        # log this error to file log
-        # logger.error('Failed to export data to file as format json')
-
-
     # export data to file as csv format
     try:
         df = pd.DataFrame(stock_list)
@@ -231,9 +188,12 @@ def export_file(data):
 
         # logger.info('Success to export data to file as format csv')
 
-    except:
+    except :
         print('Cannot export data to csv file.\n')
         logger.error('Failed to export data to file as format csv')
+
+    # End function
+    return
 
 
 # Save to mysql database
@@ -269,64 +229,69 @@ def save_database(stock_list):
     update_query = "UPDATE vnindex.stock SET reference_price = %s, celling_price = %s, floor_price = %s, price = %s, volume = %s, total_volume = %s, total_value = %s, highest_price = %s, lowest_price = %s, average_price = %s, updated_at = %s WHERE code = %s " 
 
 
-    try :
-        # create a new cursor object using the connection
-        cursor = connection.cursor()
+    # create a new cursor object using the connection
+    cursor = connection.cursor()
+
+    print('Save data to database.')
+    for item in tqdm(stock_list):
+        stockCode = item['stock-code']
+    
+        # execute the queries
+        try:
+            if not ( cursor.execute(select_query, stockCode)) :
+                # there are no record that has stock code in database
+                # insert stock item to database
+
+                # Get datetime now
+                date_time_now = datetime.datetime.now()
+
+                cursor.execute(insert_query, (stockCode, item['reference-price'], item['celling-price'], item['floor-price'], item['price'] , item['volume'] , item['total-volume'] , item['total-value'], item['highest-price'], item['lowest-price'], item['average-price'], date_time_now, date_time_now ))
+
+        
+                # print(f"Successful Insert {stockCode}")
+            else:
+                # update stock item to database
+                date_time_now = datetime.datetime.now()
+
+                cursor.execute(update_query, (item['reference-price'], item['celling-price'] , item['floor-price'],  item['price'], item['volume'], item['total-volume'], item['total-value'], item['highest-price'], item['lowest-price'], item['average-price'], date_time_now, stockCode )) 
+
+                # print(f"Successful Update {stockCode}")
+
+            # Commit any pending transaction to the database
+            connection.commit()  
+        
+        except error as e:
+            print("Error in " + stockCode + ", erorr = " + e)
+            logger.error("Error while connecting to MySQL", e)
+            break
+
+    
+    print('Complete!')
+
+    # Close the connection to database now 
+    cursor.close()
+    connection.close()
+    print("MySQL connection is closed\n")
 
 
-        print('Save data to database.')
-        for item in tqdm(stock_list):
-            stockCode = item['stock-code']
+# crawl
+def crawl(url):
+    '''
+    This function crawls stock data from the `url` link
 
-            try:
-                # execute
-                if not ( cursor.execute(select_query, stockCode)) :
-                    # there are no record that has stock code in database
-                    # insert stock item to database
+    Parameters:
+    url : the website link that needs to crawl
 
-                    date_time_now = datetime.datetime.now()
+    Returns:
+    this function doesn't return anything
+    
+    '''
 
-                    cursor.execute(insert_query, (stockCode, item['reference-price'], item['celling-price'], item['floor-price'], item['price'] , item['volume'] , item['total-volume'] , item['total-value'], item['highest-price'], item['lowest-price'], item['average-price'], date_time_now, date_time_now ))
-
-            
-                    # print(f"Successful Insert {stockCode}")
-                else:
-                    # update stock item to database
-
-                    date_time_now = datetime.datetime.now()
-
-                    cursor.execute(update_query, (item['reference-price'], item['celling-price'] , item['floor-price'],  item['price'], item['volume'], item['total-volume'], item['total-value'], item['highest-price'], item['lowest-price'], item['average-price'], date_time_now, stockCode )) 
-
-                    # print(f"Successful Update {stockCode}")
-
-                # Commit any pending transaction to the database
-                connection.commit()  
-            
-            except error as e:
-                print("Error in " + stockCode + ", erorr = " + e)
-                return
-
-        cursor.close()
-
-        print('Complete!')
-
-    except error as e:
-        print("Error while connecting to MySQL", e)
-        logger.error("Error while connecting to MySQL", e)
-
-    finally: 
-        # Close the connection to database now 
-        connection.close()
-        print("MySQL connection is closed\n")
-
-
-# main
-def main():
+    # Access to url
     try:
         print(f'Access the url {url} ...\n')
 
         # import browser firefox
-        # driver = webdriver.Firefox(options=options)
         driver = webdriver.Firefox()  
         
         # access the url
@@ -350,25 +315,41 @@ def main():
         exit(0)
         
     print('\n______________________ CRAWL DATA ______________________')
+    sections = ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQR', 'STUV', 'WXYZ']
 
-    # call crawl_stock_data function to start crawling data from stock sections
-    crawl_stock_data(driver, 'ABC')
-    crawl_stock_data(driver, 'DEF')
-    crawl_stock_data(driver, 'GHI')
-    crawl_stock_data(driver, 'JKL')
-    crawl_stock_data(driver, 'MNO')
-    crawl_stock_data(driver, 'PQR')
-    crawl_stock_data(driver, 'STUV')
-    crawl_stock_data(driver, 'WXYZ')
+    # crawl listed stock from sections//Cổ phiếu niêm yết
+    print("Crawl listed stocks")
+    driver.find_element(By.XPATH, "//div[2]/div[2]/div/div/div").click()
+    for section in sections:
+        crawl_stock_data(driver, section)
+    
+    print("=====================")
+
+    # crawl upcom stock //Cổ phiếu chưa niêm yết
+    print("Crawl upcom stocks")
+    driver.find_element(By.XPATH, "//div[2]/div[3]/div/div/div").click()
+    for section in sections:
+        crawl_stock_data(driver, section)
+
 
     # Finishing crawl data. Print the total number of stocks
     print('Completed. We have crawled', len(stock_list),'stocks')
     print('======================================')
+
     # close web browser
     driver.close()
 
 
 if __name__ == '__main__':
-    main()
+    # create a url variable that is the website link that needs to crawl
+    url = 'https://banggia.hnx.vn'  
+
+    # Create stock-list to contain the stock-object
+    # Each item contains infomation of 1 stock such as code, prices
+    stock_list = []
+    
+    # Start
+    print('Starting application ... \n')
+    crawl(url)
     export_file(stock_list)
     save_database(stock_list)

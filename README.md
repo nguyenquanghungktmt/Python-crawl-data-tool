@@ -14,7 +14,7 @@
 
 This tool uses Python Selenium to crawl data of stock and price from website https://banggia.hnx.vn/. Each stock includes data as code, reference price, ceiling price, floor price, min price, max price, average price. 
 
-After that, all data is exported into 2 file formats, json and csv.
+After that, all data is exported into 1 file formats csv. And all dât is saved to database
 
 
 ## Main features
@@ -31,7 +31,7 @@ Enviroment require: python.
 - In windows, you can download an install python in [`https://www.python.org/downloads/`](https://www.python.org/downloads/)
 
 
-Libraries require: selenium, pandas, scrapy
+Libraries require: selenium, pandas, PyMySQL
 - Install python libraries: turn on your terminal and type `pip install -r requirements.txt`
 
 
@@ -39,8 +39,8 @@ Libraries require: selenium, pandas, scrapy
 
 - Turn on your terminal and `cd` into this folder `Python-crawl-data-tool.`
 - Run command on your terminal: `python selenium-crawl-hnx.py`
-- Data exports to 2 file: `stock-hnx-csv.csv` (csv format) and `stock-hnx-csv.json` (json format)
-- Data is saved to `stock` mysql database
+- Data exports to 1 file: `stock-hnx-csv.csv` (csv format)
+- Data is saved to `vnindex` mysql database
 
 If you want to read the documentation: 
 - In your terminal, direct to this folder, type: `python -m pydoc -w selenium-crawl-hnx.py`
@@ -58,6 +58,7 @@ Copyright © 2021 by Nguyen Quang Hung
 - Version 0.5 updated on Nov 21, 2021
 - Version 0.6 updated on Dec 5, 2021
 - Version 0.7 updated on Jan 7, 2021
+- Version 0.9 updated on Jan 20, 2021
 
 
 # Author

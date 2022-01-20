@@ -3,7 +3,7 @@ import pymysql.cursors
 # create a connection.
 def getConnection(): 
     """
-    The getConnection() function creates a connection to mysql database by using library PyMySQL.
+    The getConnection() function creates a connection to mysql database server by using library PyMySQL.
 
     Parameters:
     This function doesn't have any parameters.
@@ -15,7 +15,7 @@ def getConnection():
 
     # create connection to database with host, username, password, database
     connection = pymysql.connect(host='sinno.soict.ai',
-                                 user='nguyenquanghung111',
+                                 user='nguyenquanghung',
                                  password='20183760',
                                  db='vnindex',
                                  charset='utf8mb4',
