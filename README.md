@@ -14,7 +14,7 @@
 
 This tool uses Python Selenium to crawl data of stock and price from website https://banggia.hnx.vn/. Each stock includes data as code, prices, total volume, total value. After that, all data is exported into 1 file formats csv. And all data is saved to database.
 
-#### Python Selenium
+### 1.Python Selenium
 
 Selenium is a free (open source) test automation suite for web applications across different browsers and platforms, with a focus on automating web-based applications. Selenium toolkit has 4 components: Selenium Integrated Development Environment (IDE), Selenium Remote Control (RC), WebDriver, Selenium Grid in which WebDriver is the most appreciated. In particular, Selenium WebDriver is compatible with almost all popular web browsers and supports most of today's popular programming languages. In Tool Crawl software, I use Selenium WebDriver tool on Python programming language.
 
@@ -30,12 +30,12 @@ Example:
 ```
 
 
-#### Functions
+### 2. Functions in file crawl-stock-hnx.py
 
 On the website `banggia.hnx.vn`, stock codes are divided into 2 types, listed stocks and unlisted stocks (upcom stock). Each stock page is further divided into smaller sections by ticker name, which are 'ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQR', 'STUV', ' WXYZ'.
 
 
-- Function crawl(url):
+1. Function crawl(url):
 
 This function creates a driver that controls access to url = `https:\\banggia.hnx.vn`. Then crawl the data on the listed and unlisted stock items. For each of the above, call the crawl_sections_data function to get data from the smaller sections of the web page.
 
@@ -43,7 +43,7 @@ The input parameter is the url of the website to be crawled.
 
 This function returns a list of stock data
 
-- Function crawl_sections_data(driver, section)
+2. Function crawl_sections_data(driver, section)
 
 Parameters:
 
@@ -51,7 +51,7 @@ driver : the instance of WebDriver
 
 section (String): A input string describes the name of the stock section like ABC, DEF, GHI, ...
 
-Thisfunction get all rows of data in the table. Each row contains information of a stock.
+This function get all rows of data in the table. Each row contains information of a stock.
 Each stock with such fields will be stored in a dictionary as follows:
 
 * stock-code: the code name of stock
@@ -65,6 +65,31 @@ Each stock with such fields will be stored in a dictionary as follows:
 * highest-price: highest selling price
 * lowest-price: lowest selling price
 * average-price: average selling price
+
+This function returns a list of stock data that crawl on the group
+
+3. Function export_data(data):
+
+This function saves data to file format csv
+
+Parameters:
+
+data: a list structure containing data of stock codes.
+
+
+4. Function save_database(data):
+
+This function creates connection to mysql database server by using the function `getConnection()` in the file `connection_utils.py`. For each stock code, search the database to find that stock (select_query). If it doesn't exist, do a new insert (insert_query). If it already exists, execute the update (update_query).
+
+Parameters:
+
+data: a list structure containing data of stock codes.
+
+
+5. Function getConnection() in file connection_utils.py :
+
+
+
 
 ## Main features
 
@@ -106,8 +131,9 @@ Copyright © 2021 by Nguyen Quang Hung
 - Version 0.4 updated on Nov 14, 2021
 - Version 0.5 updated on Nov 21, 2021
 - Version 0.6 updated on Dec 5, 2021
-- Version 0.7 updated on Jan 7, 2021
-- Version 0.9 updated on Jan 20, 2021
+- Version 0.7 updated on Jan 7, 2022
+- Version 0.9 updated on Jan 20, 2022
+- Version 1.0 released on Jan 22, 2022
 
 
 # Author
