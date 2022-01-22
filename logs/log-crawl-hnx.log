@@ -115,3 +115,13 @@ evaluate.fromJSON@chrome://remote/content/marionette/evaluate.js:254:26
 evaluate.fromJSON@chrome://remote/content/marionette/evaluate.js:262:29
 receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.jsm:79:29
 
+2022-01-22 10:47:02,708 ERROR:Failed to access the url https://banggia.hnx. 
+Error: Message: Reached error page: about:neterror?e=dnsNotFound&u=https%3A//banggia.hnx/&c=UTF-8&d=Ch%C3%BAng%20t%C3%B4i%20kh%C3%B4ng%20th%E1%BB%83%20k%E1%BA%BFt%20n%E1%BB%91i%20%C4%91%E1%BA%BFn%20m%C3%A1y%20ch%E1%BB%A7%20t%E1%BA%A1i%20banggia.hnx.
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:183:5
+UnknownError@chrome://remote/content/shared/webdriver/Errors.jsm:510:5
+checkReadyState@chrome://remote/content/marionette/navigate.js:64:24
+onNavigation@chrome://remote/content/marionette/navigate.js:312:39
+emit@resource://gre/modules/EventEmitter.jsm:160:20
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.jsm:44:25
+

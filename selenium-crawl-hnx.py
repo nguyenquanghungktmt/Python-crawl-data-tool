@@ -4,6 +4,7 @@ Created on Oct 23, 2021
 @author: Nguyen Quang Hung
 '''
 
+from time import sleep
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
@@ -12,12 +13,12 @@ from selenium.webdriver.support import expected_conditions as EC
 from tqdm import tqdm
 import pandas as pd
 import logging, logging.handlers
-import connection_utils
 import datetime
+import connection_utils
   
 
 # declare logging
-logging.basicConfig(level=logging.DEBUG, filename="log-crawl-hnx.log", format='%(asctime)s %(levelname)s:%(message)s')
+logging.basicConfig(level=logging.DEBUG, filename="./logs/log-crawl-hnx.log", format='%(asctime)s %(levelname)s:%(message)s')
 logging.disable(logging.DEBUG)
 
 logger = logging.getLogger(__name__)
@@ -35,10 +36,9 @@ smtp_handler = logging.handlers.SMTPHandler(mailhost=('smtp.gmail.com', 587),
 logger.addHandler(smtp_handler)
 
 
-def crawl_stock_data(driver, section):
+def crawl_sections_data(driver, section):
     """
     This function takes as 2 input parameters the Web Driver and the name of the stock item section, and crawls the data of stock codes and prices. 
-    Then put the data into the stock_list array
 
     Parameters:
     driver : the instance of WebDriver 
@@ -52,13 +52,14 @@ def crawl_stock_data(driver, section):
     # Call selenium function to click on button by xpath
     xpath = '//div[@id="' + section +'"]/p'
     driver.find_element(By.XPATH, xpath).click()
+    sleep(3)
 
 
     try:
         # Call selenium function to fill all rows in stock table
         # Each element corresponds to a line describing a stock
         # wait 10 seconds before looking for element
-        items = WebDriverWait(driver, 20).until(
+        items = WebDriverWait(driver, 10).until(
             EC.presence_of_all_elements_located((By.XPATH, '//div/table/tbody/tr'))
         )
 
@@ -72,9 +73,7 @@ def crawl_stock_data(driver, section):
     # Notice to user
     print(f"Crawl {len(items)} items in {section} section")
 
-    # log to logging file
-    # logger.info(f'Crawl {len(items)} stock items in {section} section')
-
+    result = []
     for item in tqdm(items):
         try:
             # Get the stock code
@@ -152,7 +151,7 @@ def crawl_stock_data(driver, section):
             }
 
             # push that element to the last of the stock item list
-            stock_list.append(stock_item)
+            result.append(stock_item)
         
         except Exception as e:
             # There has some wrong with crawling data
@@ -167,8 +166,83 @@ def crawl_stock_data(driver, section):
 
     # End function
     print("Done!\n")
-    return
+    return result
 
+    # crawl
+def crawl(url):
+    """
+    This function crawls stock data from the `url` link
+
+    Parameters:
+    url : the website link that needs to crawl
+
+    Returns:
+    this function doesn't return anything
+    
+    """
+
+    # Access to url
+    try:
+        print(f"Access the url {url} ...\n")
+
+        # initialize the Firefox driver
+        options = Options()
+        options.headless = True
+        options.page_load_strategy = 'eager'
+        driver = webdriver.Firefox(options=options)
+        
+        # access the url
+        driver.get(url)   
+
+        # set implicit wait is 5s
+        driver.implicitly_wait(5)
+
+    except Exception as e:
+        # There has some wrong with url connection problem
+        print("Can\'t access the url. Please check your operation and try again.")
+
+        # log that cannot access the url
+        logger.error(f"Failed to access the url {url}. \nError: {e}")
+
+        # close web browser
+        driver.close()
+
+        # shutdown app
+        exit(0)
+        
+    print('\n______________________ CRAWL DATA ______________________')
+
+    sections = ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQR', 'STUV', 'WXYZ']
+
+    # contains stock data
+    data = []
+
+    # crawl listed stock from sections
+    print("Crawl listed stocks")
+    driver.find_element(By.XPATH, "//div[2]/div[2]/div/div/div").click()
+    for section in sections:
+        res = crawl_sections_data(driver, section)
+        data.extend(res)
+    
+    print("=====================")
+
+    # crawl upcom stock
+    print("Crawl upcom stocks")
+    driver.find_element(By.XPATH, "//div[2]/div[3]/div/div/div").click()
+    for section in sections:
+        res = crawl_sections_data(driver, section)
+        data.extend(res)
+
+
+    # Finishing crawl data. Print the total number of stocks
+    print(f"Completed. We have crawled {len(data)} stocks")
+    print("======================================")
+
+    # close web browser
+    driver.close()
+
+    # End function
+    return data
 
 def export_file(data):
 
@@ -187,8 +261,8 @@ def export_file(data):
 
     # export data to file as csv format
     try:
-        df = pd.DataFrame(stock_list)
-        df.to_csv(r'stock-hnx.csv', index = None, header=True)
+        df = pd.DataFrame(data)
+        df.to_csv(r'./data/stock-hnx.csv', index = None, header=True)
 
         print("Exported data to file csv")
 
@@ -276,73 +350,7 @@ def save_database(data):
     print("MySQL connection is closed\n")
 
 
-# crawl
-def crawl(url):
-    """
-    This function crawls stock data from the `url` link
 
-    Parameters:
-    url : the website link that needs to crawl
-
-    Returns:
-    this function doesn't return anything
-    
-    """
-
-    # Access to url
-    try:
-        print(f"Access the url {url} ...\n")
-
-        # import browser firefox 
-        options = Options()
-        options.headless = True
-        options.page_load_strategy = 'eager'
-        driver = webdriver.Firefox(options=options)
-        
-        # access the url
-        driver.get(url)   
-
-        # set implicit wait is 5s
-        driver.implicitly_wait(5)
-
-    except Exception as e:
-        # There has some wrong with url connection problem
-        print("Can\'t access the url. Please check your operation and try again.")
-
-        # log that cannot access the url
-        logger.error(f"Failed to access the url {url}. \nError: {e}")
-
-        # close web browser
-        driver.close()
-
-        # shutdown app
-        exit(0)
-        
-    print('\n______________________ CRAWL DATA ______________________')
-
-    sections = ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQR', 'STUV', 'WXYZ']
-
-    # crawl listed stock from sections
-    print("Crawl listed stocks")
-    driver.find_element(By.XPATH, "//div[2]/div[2]/div/div/div").click()
-    for section in sections:
-        crawl_stock_data(driver, section)
-    
-    print("=====================")
-
-    # crawl upcom stock
-    print("Crawl upcom stocks")
-    driver.find_element(By.XPATH, "//div[2]/div[3]/div/div/div").click()
-    for section in sections:
-        crawl_stock_data(driver, section)
-
-
-    # Finishing crawl data. Print the total number of stocks
-    print("Completed. We have crawled", len(stock_list),'stocks')
-    print("======================================")
-
-    # close web browser
-    driver.close()
 
 
 if __name__ == '__main__':
@@ -355,6 +363,6 @@ if __name__ == '__main__':
 
     # Start
     print("Starting application ... \n")
-    crawl(url)
+    stock_list = crawl(url)
     export_file(stock_list)
     save_database(stock_list)

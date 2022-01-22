@@ -19,7 +19,7 @@ Selenium is a free (open source) test automation suite for web applications acro
 
 Selenium WebDriver creates a driver to the page to control the web page. This driver is responsible for sending launch commands and then interacting directly with browsers. To interact with elements in the browser, it is necessary to find the element through Xpath.
 
-To determine the Xpath of elements on the web page, I use an extension called Selenium IDE. This extension records all web page manipulation actions and records the address of the object just executed. For example, if you click on a data box on a web page, the utility will record the onclick event and the corresponding address of that button.
+To determine the Xpath of elements on the web page, I use an extension called [https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd](Selenium IDE). This extension records all web page manipulation actions and records the address of the object just executed. For example, if you click on a data box on a web page, the extension will record the onclick event and the corresponding address of that button.
 
 Then, when you have the Xpath, call the find_element function to let the driver identify the element and then execute the job of getting data or other events such as clicking on the object.
 
@@ -31,12 +31,12 @@ Example:
 
 ### II. Functions in file crawl-stock-hnx.py
 
-On the website `banggia.hnx.vn`, stock codes are divided into 2 types, listed stocks and unlisted stocks (upcom stock). Each stock page is further divided into smaller sections by ticker name, which are 'ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQR', 'STUV', ' WXYZ'.
+On the website [https:\\banggia.hnx.vn](https:\\banggia.hnx.vn), stock codes are divided into 2 types, listed stocks and unlisted stocks (upcom stock). Each stock page is further divided into smaller sections by ticker name, which are 'ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQR', 'STUV', ' WXYZ'.
 
 
 **1. Function crawl(url):**
 
-This function creates a driver that controls access to url = `https:\\banggia.hnx.vn`. Then crawl the data on the listed and unlisted stock items. For each of the above, call the crawl_sections_data function to get data from the smaller sections of the web page.
+This function creates a driver that controls access to url = [https:\\banggia.hnx.vn](https:\\banggia.hnx.vn). Then crawl the data on the listed and unlisted stock items. For each of the above, call the crawl_sections_data function to get data from the smaller sections of the web page.
 
 The input parameter is the url of the website to be crawled.
 
