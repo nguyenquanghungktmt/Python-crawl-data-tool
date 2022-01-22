@@ -18,7 +18,7 @@ import connection_utils
   
 
 # declare logging
-logging.basicConfig(level=logging.DEBUG, filename="./logs/log-crawl-hnx.log", format='%(asctime)s %(levelname)s:%(message)s')
+logging.basicConfig(level=logging.DEBUG, filename="./logs/log-crawl-data.log", format='%(asctime)s %(levelname)s:%(message)s')
 logging.disable(logging.DEBUG)
 
 logger = logging.getLogger(__name__)
