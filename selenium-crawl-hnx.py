@@ -4,19 +4,20 @@ Created on Oct 23, 2021
 @author: Nguyen Quang Hung
 '''
 
-from os import error
 from selenium import webdriver
+from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from tqdm import tqdm
 import pandas as pd
-import json
 import logging, logging.handlers
 import connection_utils
 import datetime
   
 
 # declare logging
-logging.basicConfig(level=logging.DEBUG, filename='crawl-stock-hnx.log', format='%(asctime)s %(levelname)s:%(message)s')
+logging.basicConfig(level=logging.DEBUG, filename="log-crawl-hnx.log", format='%(asctime)s %(levelname)s:%(message)s')
 logging.disable(logging.DEBUG)
 
 logger = logging.getLogger(__name__)
@@ -48,20 +49,28 @@ def crawl_stock_data(driver, section):
     
     """
 
-    # Create xpath to selenium click event
+    # Call selenium function to click on button by xpath
     xpath = '//div[@id="' + section +'"]/p'
-
-
-    # Call selenium function to click on button on browser
     driver.find_element(By.XPATH, xpath).click()
-    driver.implicitly_wait(10)
 
-    # Call selenium function to fill all elements that have style "trChange"
-    # Each element corresponds to a line describing a stock
-    items = driver.find_elements(By.XPATH, '//div/table/tbody/tr')
+
+    try:
+        # Call selenium function to fill all rows in stock table
+        # Each element corresponds to a line describing a stock
+        # wait 10 seconds before looking for element
+        items = WebDriverWait(driver, 20).until(
+            EC.presence_of_all_elements_located((By.XPATH, '//div/table/tbody/tr'))
+        )
+
+    except:
+        # else return function
+        print(f"Error! Cannot find any stock in {section} section.\n")
+        logger.error("Error! Cannot find any stock in {section} section.")
+        return
+    
 
     # Notice to user
-    print(f'Crawl {len(items)} items in {section} section')
+    print(f"Crawl {len(items)} items in {section} section")
 
     # log to logging file
     # logger.info(f'Crawl {len(items)} stock items in {section} section')
@@ -144,23 +153,20 @@ def crawl_stock_data(driver, section):
 
             # push that element to the last of the stock item list
             stock_list.append(stock_item)
-
-            # log to logging file
-            # logger.info(f'Success to get stock: {stockCode}')
         
-        except:
+        except Exception as e:
             # There has some wrong with crawling data
-            print(f'Error! Failed crawling a stock in {section} section.\n')
+            print(f"Error! Failed when crawling a stock in {section} section.\n")
 
             # log this error
-            logger.error(f'Failed to crawl a stock in {section} section')
+            logger.error(f"Failed when crawling crawl a stock in {section} section. Error: {e}")
 
             return
 
         # end loop
 
     # End function
-    print('Done!\n')
+    print("Done!\n")
     return
 
 
@@ -177,33 +183,30 @@ def export_file(data):
     
     """
 
-    print('\n______________________ SAVE DATA TO FILE ______________________')
+    print("\n______________________ SAVE DATA TO FILE ______________________")
 
     # export data to file as csv format
     try:
         df = pd.DataFrame(stock_list)
-        df.to_csv(r'stock-hnx-csv.csv', index = None, header=True)
+        df.to_csv(r'stock-hnx.csv', index = None, header=True)
 
         print("Exported data to file csv")
 
-        # logger.info('Success to export data to file as format csv')
-
-    except :
-        print('Cannot export data to csv file.\n')
-        logger.error('Failed to export data to file as format csv')
+    except Exception as e:
+        print("Cannot export data to csv file.\n")
+        logger.error(f"Failed to export data to csv file. Error: {e}")
 
     # End function
     return
 
 
 # Save to mysql database
-def save_database(stock_list):
+def save_database(data):
     
     """
     The function save all stock data that just been crawled to mysql database.
 
-    Parameters:
-    stock_data (list): A list data of stock codes and prices.
+    Parameters: None
 
     Returns:
     this function doesn't return anything
@@ -215,29 +218,28 @@ def save_database(stock_list):
     # Create a connection to database
     try:
         connection = connection_utils.getConnection() 
-    except:
-        print("Failed connect to database! Please check and try again.") 
+    except Exception as e:
+        print("Failed connect to database! Please check and try again.")
+        logger.error(f"Error connect to database . Error: {e}") 
         return
 
     print("Connect to database successful!")  
 
     # Define sql query: select, insert, create
     select_query = "SELECT * FROM vnindex.stock WHERE code = %s "
-
     insert_query =  "INSERT INTO vnindex.stock (code, reference_price, celling_price, floor_price, price, volume, total_volume, total_value, highest_price, lowest_price, average_price, created_at, updated_at) " + " VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s) " 
-
     update_query = "UPDATE vnindex.stock SET reference_price = %s, celling_price = %s, floor_price = %s, price = %s, volume = %s, total_volume = %s, total_value = %s, highest_price = %s, lowest_price = %s, average_price = %s, updated_at = %s WHERE code = %s " 
 
 
-    # create a new cursor object using the connection
+    # Create a new cursor object using the connection
     cursor = connection.cursor()
 
-    print('Save data to database.')
-    for item in tqdm(stock_list):
-        stockCode = item['stock-code']
-    
+    print("Save data to database.")
+    for item in tqdm(data):
         # execute the queries
         try:
+            stockCode = item["stock-code"]
+    
             if not ( cursor.execute(select_query, stockCode)) :
                 # there are no record that has stock code in database
                 # insert stock item to database
@@ -260,13 +262,13 @@ def save_database(stock_list):
             # Commit any pending transaction to the database
             connection.commit()  
         
-        except error as e:
-            print("Error in " + stockCode + ", erorr = " + e)
-            logger.error("Error while connecting to MySQL", e)
+        except Exception as e:
+            print("Error in " + stockCode + " while querying to MySQL server")
+            logger.error(f"Error querying to MySQL server. Error: {e}")
             break
 
     
-    print('Complete!')
+    print("Complete!")
 
     # Close the connection to database now 
     cursor.close()
@@ -276,7 +278,7 @@ def save_database(stock_list):
 
 # crawl
 def crawl(url):
-    '''
+    """
     This function crawls stock data from the `url` link
 
     Parameters:
@@ -285,28 +287,30 @@ def crawl(url):
     Returns:
     this function doesn't return anything
     
-    '''
+    """
 
     # Access to url
     try:
-        print(f'Access the url {url} ...\n')
+        print(f"Access the url {url} ...\n")
 
-        # import browser firefox
-        driver = webdriver.Firefox()  
+        # import browser firefox 
+        options = Options()
+        options.headless = True
+        options.page_load_strategy = 'eager'
+        driver = webdriver.Firefox(options=options)
         
         # access the url
         driver.get(url)   
 
-        # set implicit wait is 10s
-        driver.implicitly_wait(10)
+        # set implicit wait is 5s
+        driver.implicitly_wait(5)
 
-    except Exception :
-        # There has some wrong with connection problem
-        print('Opps! We ran into some problems')
-        print('Can\'t access the url. Please check your operation and try again.')
+    except Exception as e:
+        # There has some wrong with url connection problem
+        print("Can\'t access the url. Please check your operation and try again.")
 
         # log that cannot access the url
-        logger.error(f'Failed to access the url {url}')
+        logger.error(f"Failed to access the url {url}. \nError: {e}")
 
         # close web browser
         driver.close()
@@ -315,9 +319,10 @@ def crawl(url):
         exit(0)
         
     print('\n______________________ CRAWL DATA ______________________')
+
     sections = ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQR', 'STUV', 'WXYZ']
 
-    # crawl listed stock from sections//Cổ phiếu niêm yết
+    # crawl listed stock from sections
     print("Crawl listed stocks")
     driver.find_element(By.XPATH, "//div[2]/div[2]/div/div/div").click()
     for section in sections:
@@ -325,7 +330,7 @@ def crawl(url):
     
     print("=====================")
 
-    # crawl upcom stock //Cổ phiếu chưa niêm yết
+    # crawl upcom stock
     print("Crawl upcom stocks")
     driver.find_element(By.XPATH, "//div[2]/div[3]/div/div/div").click()
     for section in sections:
@@ -333,23 +338,23 @@ def crawl(url):
 
 
     # Finishing crawl data. Print the total number of stocks
-    print('Completed. We have crawled', len(stock_list),'stocks')
-    print('======================================')
+    print("Completed. We have crawled", len(stock_list),'stocks')
+    print("======================================")
 
     # close web browser
     driver.close()
 
 
 if __name__ == '__main__':
-    # create a url variable that is the website link that needs to crawl
-    url = 'https://banggia.hnx.vn'  
+    # website link needs to crawl
+    url = "https://banggia.hnx.vn"  
 
     # Create stock-list to contain the stock-object
     # Each item contains infomation of 1 stock such as code, prices
     stock_list = []
-    
+
     # Start
-    print('Starting application ... \n')
+    print("Starting application ... \n")
     crawl(url)
     export_file(stock_list)
     save_database(stock_list)

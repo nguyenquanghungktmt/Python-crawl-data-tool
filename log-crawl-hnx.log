@@ -1,0 +1,117 @@
+2022-01-21 22:02:21,589 ERROR:Failed to access the url https://banggia.hnx. 
+Error: Message: Reached error page: about:neterror?e=dnsNotFound&u=https%3A//banggia.hnx/&c=UTF-8&d=Ch%C3%BAng%20t%C3%B4i%20kh%C3%B4ng%20th%E1%BB%83%20k%E1%BA%BFt%20n%E1%BB%91i%20%C4%91%E1%BA%BFn%20m%C3%A1y%20ch%E1%BB%A7%20t%E1%BA%A1i%20banggia.hnx.
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:183:5
+UnknownError@chrome://remote/content/shared/webdriver/Errors.jsm:510:5
+checkReadyState@chrome://remote/content/marionette/navigate.js:64:24
+onNavigation@chrome://remote/content/marionette/navigate.js:312:39
+emit@resource://gre/modules/EventEmitter.jsm:160:20
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.jsm:44:25
+
+2022-01-21 23:49:17,896 ERROR:Error querying to MySQL server. string indices must be integers
+2022-01-22 09:36:12,021 ERROR:Failed when crawling crawl a stock in ABC section
+2022-01-22 10:01:12,116 ERROR:Failed to access the url https://banggia.hnx.vn. 
+Error: [WinError 267] The directory name is invalid: '.\\driver\\geckodriver.exe'
+2022-01-22 10:01:34,971 ERROR:Failed to access the url https://banggia.hnx.vn. 
+Error: [WinError 267] The directory name is invalid: '.\\driver\\geckodriver.exe'
+2022-01-22 10:02:11,218 ERROR:Failed to access the url https://banggia.hnx.vn. 
+Error: [WinError 267] The directory name is invalid: 'driver\\geckodriver.exe'
+2022-01-22 10:06:34,067 ERROR:Failed to access the url https://banggia.hnx.vn. 
+Error: Message: session not created: This version of ChromeDriver only supports Chrome version 95
+Current browser version is 97.0.4692.71 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00E106F3+2492147]
+	Ordinal0 [0x00DA9BD1+2071505]
+	Ordinal0 [0x00CB2478+1057912]
+	Ordinal0 [0x00CD0631+1181233]
+	Ordinal0 [0x00CCC43B+1164347]
+	Ordinal0 [0x00CC9C9F+1154207]
+	Ordinal0 [0x00CF9DFF+1351167]
+	Ordinal0 [0x00CF9A6A+1350250]
+	Ordinal0 [0x00CF568B+1332875]
+	Ordinal0 [0x00CD21D4+1188308]
+	Ordinal0 [0x00CD302F+1191983]
+	GetHandleVerifier [0x00F967A6+1545030]
+	GetHandleVerifier [0x0104105C+2243580]
+	GetHandleVerifier [0x00E9BC97+518199]
+	GetHandleVerifier [0x00E9AD80+514336]
+	Ordinal0 [0x00DAED2D+2092333]
+	Ordinal0 [0x00DB2EE8+2109160]
+	Ordinal0 [0x00DB3022+2109474]
+	Ordinal0 [0x00DBCB71+2149233]
+	BaseThreadInitThunk [0x75A70419+25]
+	RtlGetAppContainerNamedObjectPath [0x76F272FD+237]
+	RtlGetAppContainerNamedObjectPath [0x76F272CD+189]
+
+2022-01-22 10:06:41,227 ERROR:Failed to access the url https://banggia.hnx.vn. 
+Error: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+2022-01-22 10:07:11,386 ERROR:Failed to access the url https://banggia.hnx.vn. 
+Error: Message: session not created: This version of ChromeDriver only supports Chrome version 95
+Current browser version is 97.0.4692.71 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00E106F3+2492147]
+	Ordinal0 [0x00DA9BD1+2071505]
+	Ordinal0 [0x00CB2478+1057912]
+	Ordinal0 [0x00CD0631+1181233]
+	Ordinal0 [0x00CCC43B+1164347]
+	Ordinal0 [0x00CC9C9F+1154207]
+	Ordinal0 [0x00CF9DFF+1351167]
+	Ordinal0 [0x00CF9A6A+1350250]
+	Ordinal0 [0x00CF568B+1332875]
+	Ordinal0 [0x00CD21D4+1188308]
+	Ordinal0 [0x00CD302F+1191983]
+	GetHandleVerifier [0x00F967A6+1545030]
+	GetHandleVerifier [0x0104105C+2243580]
+	GetHandleVerifier [0x00E9BC97+518199]
+	GetHandleVerifier [0x00E9AD80+514336]
+	Ordinal0 [0x00DAED2D+2092333]
+	Ordinal0 [0x00DB2EE8+2109160]
+	Ordinal0 [0x00DB3022+2109474]
+	Ordinal0 [0x00DBCB71+2149233]
+	BaseThreadInitThunk [0x75A70419+25]
+	RtlGetAppContainerNamedObjectPath [0x76F272FD+237]
+	RtlGetAppContainerNamedObjectPath [0x76F272CD+189]
+
+2022-01-22 10:07:33,789 ERROR:Failed to access the url https://banggia.hnx.vn. 
+Error: Message: 'chromedriver.exe' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+
+2022-01-22 10:08:43,633 ERROR:Failed to access the url https://banggia.hnx.vn. 
+Error: Message: session not created: This version of ChromeDriver only supports Chrome version 95
+Current browser version is 97.0.4692.71 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x012506F3+2492147]
+	Ordinal0 [0x011E9BD1+2071505]
+	Ordinal0 [0x010F2478+1057912]
+	Ordinal0 [0x01110631+1181233]
+	Ordinal0 [0x0110C43B+1164347]
+	Ordinal0 [0x01109C9F+1154207]
+	Ordinal0 [0x01139DFF+1351167]
+	Ordinal0 [0x01139A6A+1350250]
+	Ordinal0 [0x0113568B+1332875]
+	Ordinal0 [0x011121D4+1188308]
+	Ordinal0 [0x0111302F+1191983]
+	GetHandleVerifier [0x013D67A6+1545030]
+	GetHandleVerifier [0x0148105C+2243580]
+	GetHandleVerifier [0x012DBC97+518199]
+	GetHandleVerifier [0x012DAD80+514336]
+	Ordinal0 [0x011EED2D+2092333]
+	Ordinal0 [0x011F2EE8+2109160]
+	Ordinal0 [0x011F3022+2109474]
+	Ordinal0 [0x011FCB71+2149233]
+	BaseThreadInitThunk [0x75A70419+25]
+	RtlGetAppContainerNamedObjectPath [0x76F272FD+237]
+	RtlGetAppContainerNamedObjectPath [0x76F272CD+189]
+
+2022-01-22 10:23:51,705 ERROR:Failed when crawling crawl a stock in ABC section. Error: Message: The element reference of <div id="A32_ref_price" class="color5"> is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed
+Stacktrace:
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:183:5
+StaleElementReferenceError@chrome://remote/content/shared/webdriver/Errors.jsm:464:5
+element.resolveElement@chrome://remote/content/marionette/element.js:681:11
+evaluate.fromJSON@chrome://remote/content/marionette/evaluate.js:254:26
+evaluate.fromJSON@chrome://remote/content/marionette/evaluate.js:262:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.jsm:79:29
+

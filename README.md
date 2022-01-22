@@ -43,7 +43,7 @@ Libraries require: selenium, pandas, PyMySQL
 - Data is saved to `vnindex` mysql database
 
 If you want to read the documentation: 
-- In your terminal, direct to this folder, type: `python -m pydoc -w selenium-crawl-hnx.py`
+- In your terminal, direct to this folder, type: `python -m pydoc -w .\selenium-crawl-hnx.py`
 - documentation is exported to file `selenium-crawl-hnx.html`. You can watch on browser.
 
 
