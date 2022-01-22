@@ -14,11 +14,11 @@
 
 This tool uses Python Selenium to crawl data of stock and price from website https://banggia.hnx.vn/. Each stock includes data as code, prices, total volume, total value. After that, all data is exported into 1 file formats csv. And all data is saved to database.
 
-### 1.Python Selenium
+### I. Python Selenium
 
 Selenium is a free (open source) test automation suite for web applications across different browsers and platforms, with a focus on automating web-based applications. Selenium toolkit has 4 components: Selenium Integrated Development Environment (IDE), Selenium Remote Control (RC), WebDriver, Selenium Grid in which WebDriver is the most appreciated. In particular, Selenium WebDriver is compatible with almost all popular web browsers and supports most of today's popular programming languages. In Tool Crawl software, I use Selenium WebDriver tool on Python programming language.
 
-The working principle of Selenium WebDriver is very simple. Web Driver is understood as a website driver. First, initialize a driver to the website to get the data. After the web page loads, we need to locate the element. Here I determine based on Xpath.
+Selenium WebDriver creates a driver to the page to control the web page. This driver is responsible for sending launch commands and then interacting directly with browsers. To interact with elements in the browser, it is necessary to find the element through Xpath.
 
 To determine the Xpath of elements on the web page, I use an extension called Selenium IDE. This extension records all web page manipulation actions and records the address of the object just executed. For example, if you click on a data box on a web page, the utility will record the onclick event and the corresponding address of that button.
 
@@ -30,7 +30,7 @@ Example:
 ```
 
 
-### 2. Functions in file crawl-stock-hnx.py
+### II. Functions in file crawl-stock-hnx.py
 
 On the website `banggia.hnx.vn`, stock codes are divided into 2 types, listed stocks and unlisted stocks (upcom stock). Each stock page is further divided into smaller sections by ticker name, which are 'ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQR', 'STUV', ' WXYZ'.
 
@@ -93,10 +93,15 @@ This function creates a new connection to the mysql database with the informatio
 Returns a connection.
 
 
-**6. Web API**
+### III. Web API
 
 I use nodejs to build Web API server. Then push the server to a free site called heroku.com.
 The server provides an api at: `http://vnindex.herokuapp.com/getStockInfo?code={code}` with the code being the stock code entered by the user
+
+Example:
+```php
+    http://vnindex.herokuapp.com/getStockInfo?code=BCC
+```
 
 
 
