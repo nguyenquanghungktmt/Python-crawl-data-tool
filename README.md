@@ -14,7 +14,16 @@
 
 This tool uses Python Selenium to crawl data of stock and price from website https://banggia.hnx.vn/. Each stock includes data as code, reference price, ceiling price, floor price, min price, max price, average price. 
 
-After that, all data is exported into 1 file formats csv. And all dât is saved to database
+After that, all data is exported into 1 file formats csv. And all data is saved to database
+
+- Python Selenium
+Selenium is a free (open source) test automation suite for web applications across different browsers and platforms, with a focus on automating web-based applications. Selenium toolkit has 4 components: Selenium Integrated Development Environment (IDE), Selenium Remote Control (RC), WebDriver, Selenium Grid in which WebDriver is the most appreciated. In particular, Selenium WebDriver is compatible with almost all popular web browsers and supports most of today's popular programming languages. In Tool Crawl software, I use Selenium WebDriver tool on Python programming language.
+
+The working principle of Selenium WebDriver is very simple. Web Driver is understood as a website driver. First, initialize a driver to the website to get the data. After the web page loads, we need to locate the element. Here I determine based on Xpath.
+
+To determine the Xpath of elements on the web page, I use an extension called Selenium IDE. This extension records all web page manipulation actions and records the address of the object just executed. For example, if you click on a data box on a web page, the utility will record the onclick event and the corresponding address of that button.
+
+Then, when you have the Xpath, call the find_element function to let the driver identify the element and then execute the job of getting data or other events such as clicking on the object.
 
 
 ## Main features
