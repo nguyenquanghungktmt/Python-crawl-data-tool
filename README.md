@@ -25,7 +25,7 @@ To determine the Xpath of elements on the web page, I use an extension called Se
 Then, when you have the Xpath, call the find_element function to let the driver identify the element and then execute the job of getting data or other events such as clicking on the object.
 
 Example:
-```dotnetcli
+```python
     driver.find_element(By.XPATH, "//div[2]/div[3]/div/div/div")
 ```
 
@@ -36,11 +36,35 @@ On the website `banggia.hnx.vn`, stock codes are divided into 2 types, listed st
 
 
 - Function crawl(url):
+
 This function creates a driver that controls access to url = `https:\\banggia.hnx.vn`. Then crawl the data on the listed and unlisted stock items. For each of the above, call the crawl_sections_data function to get data from the smaller sections of the web page.
 
 The input parameter is the url of the website to be crawled.
 
 This function returns a list of stock data
+
+- Function crawl_sections_data(driver, section)
+
+Parameters:
+
+driver : the instance of WebDriver 
+
+section (String): A input string describes the name of the stock section like ABC, DEF, GHI, ...
+
+Thisfunction get all rows of data in the table. Each row contains information of a stock.
+Each stock with such fields will be stored in a dictionary as follows:
+
+* stock-code: the code name of stock
+* reference-price: reference price
+* celling-price: price ceiling
+* floor-price: floor price
+* price: selling price
+* volume: volume
+* total-volume: total volume
+* total-value: total value
+* highest-price: highest selling price
+* lowest-price: lowest selling price
+* average-price: average selling price
 
 ## Main features
 
