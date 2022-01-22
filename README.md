@@ -5,7 +5,6 @@
 - [Main features](#main-features)
 - [Implementation Guide](#implemention-guide)
 - [User Guide](#user-guide)
-- [License](#license)
 - [Release](#release)
 - [Author](#author)
 
@@ -16,7 +15,7 @@ This tool uses Python Selenium to crawl data of stock and price from website htt
 
 ### I. Python Selenium
 
-Selenium is a free (open source) test automation suite for web applications across different browsers and platforms, with a focus on automating web-based applications. Selenium toolkit has 4 components: Selenium Integrated Development Environment (IDE), Selenium Remote Control (RC), WebDriver, Selenium Grid in which WebDriver is the most appreciated. In particular, Selenium WebDriver is compatible with almost all popular web browsers and supports most of today's popular programming languages. In Tool Crawl software, I use Selenium WebDriver tool on Python programming language.
+Selenium is a free (open source) test automation suite for web applications across different browsers and platforms, with a focus on automating web-based applications. Selenium toolkit has 4 components: Selenium Integrated Development Environment (IDE), Selenium Remote Control (RC), WebDriver, Selenium Grid in which WebDriver is the most appreciated. In particular, Selenium WebDriver is compatible with almost all popular web browsers and supports most of today's popular programming languages. In file selenium-crawl-hnx.py, I use Selenium WebDriver tool on Python programming language.
 
 Selenium WebDriver creates a driver to the page to control the web page. This driver is responsible for sending launch commands and then interacting directly with browsers. To interact with elements in the browser, it is necessary to find the element through Xpath.
 
@@ -54,17 +53,17 @@ section (String): A input string describes the name of the stock section like AB
 This function get all rows of data in the table. Each row contains information of a stock.
 Each stock with such fields will be stored in a dictionary as follows:
 
-* stock-code: the code name of stock
-* reference-price: reference price
-* celling-price: price ceiling
-* floor-price: floor price
-* price: selling price
-* volume: volume
-* total-volume: total volume
-* total-value: total value
-* highest-price: highest selling price
-* lowest-price: lowest selling price
-* average-price: average selling price
+* `stock-code`: the code name of stock
+* `reference-price`: reference price
+* `celling-price`: price ceiling
+* `floor-price`: floor price
+* `price`: selling price
+* `volume`: volume
+* `total-volume`: total volume
+* `total-value`: total value
+* `highest-price`: highest selling price
+* `lowest-price`: lowest selling price
+* `average-price`: average selling price
 
 This function returns a list of stock data that crawl on the group
 
@@ -126,19 +125,18 @@ Example:
 
 ## User Guide
 
+- Clone repository
 - Turn on your terminal and `cd` into this folder `Python-crawl-data-tool.`
 - Run command on your terminal: `python selenium-crawl-hnx.py`
-- Data exports to 1 file: `stock-hnx-csv.csv` (csv format)
+- Data exported to file: `stock-hnx-csv.csv` (csv format)
 - Data is saved to `vnindex` mysql database
 
 If you want to read the documentation: 
 - In your terminal, direct to this folder, type: `python -m pydoc -w .\selenium-crawl-hnx.py`
-- documentation is exported to file `selenium-crawl-hnx.html`. You can watch on browser.
+- documentation is exported to file `selenium-crawl-hnx.html`. You can watch it on browser.
 
+If you want to get the stock information, use the API: `http://vnindex.herokuapp.com/getStockInfo?code= + stock_code`
 
-## License:
-
-Copyright © 2021 by Nguyen Quang Hung
 
 
 ## Release: 
