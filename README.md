@@ -35,7 +35,7 @@ Example:
 On the website `banggia.hnx.vn`, stock codes are divided into 2 types, listed stocks and unlisted stocks (upcom stock). Each stock page is further divided into smaller sections by ticker name, which are 'ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQR', 'STUV', ' WXYZ'.
 
 
-1. Function crawl(url):
+**1. Function crawl(url):**
 
 This function creates a driver that controls access to url = `https:\\banggia.hnx.vn`. Then crawl the data on the listed and unlisted stock items. For each of the above, call the crawl_sections_data function to get data from the smaller sections of the web page.
 
@@ -43,7 +43,7 @@ The input parameter is the url of the website to be crawled.
 
 This function returns a list of stock data
 
-2. Function crawl_sections_data(driver, section)
+**2. Function crawl_sections_data(driver, section)** 
 
 Parameters:
 
@@ -68,7 +68,7 @@ Each stock with such fields will be stored in a dictionary as follows:
 
 This function returns a list of stock data that crawl on the group
 
-3. Function export_data(data):
+**3. Function export_data(data):**
 
 This function saves data to file format csv
 
@@ -77,7 +77,7 @@ Parameters:
 data: a list structure containing data of stock codes.
 
 
-4. Function save_database(data):
+**4. Function save_database(data):**
 
 This function creates connection to mysql database server by using the function `getConnection()` in the file `connection_utils.py`. For each stock code, search the database to find that stock (select_query). If it doesn't exist, do a new insert (insert_query). If it already exists, execute the update (update_query).
 
@@ -86,26 +86,36 @@ Parameters:
 data: a list structure containing data of stock codes.
 
 
-5. Function getConnection() in file connection_utils.py :
+**5. Function getConnection() in file connection_utils.py :**
 
+This function creates a new connection to the mysql database with the information fields as host address, username, password, database name.
+
+Returns a connection.
+
+
+**6. Web API**
+
+I use nodejs to build Web API server. Then push the server to a free site called heroku.com.
+The server provides an api at: `http://vnindex.herokuapp.com/getStockInfo?code={code}` with the code being the stock code entered by the user
 
 
 
 ## Main features
 
-- Crawl stock data 
-- Export to file, json and csv format
+- Crawl listed stock and upcom stock data 
+- Export to csv file
 - Export documentation as html format
-- Save data to mysql database
-- Log to file logging
+- Save all data to mysql database
+- Log to file and send warning email when an error occurs
+- Provide API to get the detail information of the stock
 
 ## Implementation Guide
 
-Enviroment require: python. 
+1. Enviroment require: python. 
 - In windows, you can download an install python in [`https://www.python.org/downloads/`](https://www.python.org/downloads/)
 
 
-Libraries require: selenium, pandas, PyMySQL
+2. Libraries require: selenium, pandas, PyMySQL
 - Install python libraries: turn on your terminal and type `pip install -r requirements.txt`
 
 
