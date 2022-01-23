@@ -125,3 +125,6 @@ onNavigation@chrome://remote/content/marionette/navigate.js:312:39
 emit@resource://gre/modules/EventEmitter.jsm:160:20
 receiveMessage@chrome://remote/content/marionette/actors/MarionetteEventsParent.jsm:44:25
 
+2022-01-23 14:04:36,172 ERROR:Failed to access the url https://banggia.hnx.vn. 
+Error: Message: Process unexpectedly closed with status 0
+

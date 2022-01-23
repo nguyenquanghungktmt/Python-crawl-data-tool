@@ -17,7 +17,7 @@ This tool uses Python Selenium to crawl data of stock and price from website htt
 
 Selenium is a free (open source) test automation suite for web applications across different browsers and platforms, with a focus on automating web-based applications. Selenium toolkit has 4 components: Selenium Integrated Development Environment (IDE), Selenium Remote Control (RC), WebDriver, Selenium Grid in which WebDriver is the most appreciated. In particular, Selenium WebDriver is compatible with almost all popular web browsers and supports most of today's popular programming languages. In file selenium-crawl-hnx.py, I use Selenium WebDriver tool on Python programming language.
 
-Selenium WebDriver creates a driver to the page to control the web page. This driver is responsible for sending launch commands and then interacting directly with browsers. To interact with elements in the browser, it is necessary to find the element through Xpath.
+Selenium WebDriver creates a driver to control the brower. This driver is responsible for sending launch commands and then interacting directly with browsers. To interact with elements in the browser, it is necessary to find the element through Xpath.
 
 To determine the Xpath of elements on the web page, I use an extension called [https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd](Selenium IDE). This extension records all web page manipulation actions and records the address of the object just executed. For example, if you click on a data box on a web page, the extension will record the onclick event and the corresponding address of that button.
 
@@ -125,17 +125,19 @@ Example:
 
 ## User Guide
 
+1. Excecute
+
 - Clone repository
 - Turn on your terminal and `cd` into this folder `Python-crawl-data-tool.`
 - Run command on your terminal: `python selenium-crawl-hnx.py`
 - Data exported to file: `stock-hnx-csv.csv` (csv format)
 - Data is saved to `vnindex` mysql database
 
-If you want to read the documentation: 
+2. If you want to read the documentation: 
 - In your terminal, direct to this folder, type: `python -m pydoc -w .\selenium-crawl-hnx.py`
 - documentation is exported to file `selenium-crawl-hnx.html`. You can watch it on browser.
 
-If you want to get the stock information, use the API: `http://vnindex.herokuapp.com/getStockInfo?code= + stock_code`
+3. If you want to get the stock information, use the API: `http://vnindex.herokuapp.com/getStockInfo?code= + stock_code`
 
 
 

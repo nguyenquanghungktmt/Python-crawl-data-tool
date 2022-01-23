@@ -3984,3 +3984,32 @@ JavaScript error: https://banggia.hnx.vn/Scripts/PriceHNX.js?v=3.7, line 577: NS
 
 ###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
 
+1642921471825	geckodriver	INFO	Listening on 127.0.0.1:55369
+1642921473894	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "55370" "-no-remote" "-profile" "C:\\Users\\HUNG~1.NQ1\\AppData\\Local\\Temp\\rust_mozprofilevN6mIa"
+*** You are running in headless mode.
+1642921568219	geckodriver	INFO	Listening on 127.0.0.1:55565
+1642921570256	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-headless" "--remote-debugging-port" "55566" "-no-remote" "-profile" "C:\\Users\\HUNG~1.NQ1\\AppData\\Local\\Temp\\rust_mozprofile2dTqtd"
+*** You are running in headless mode.
+1642921571020	Marionette	INFO	Marionette enabled
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\HUNG.NQ183760\\AppData\\Local\\Temp\\rust_mozprofile2dTqtd\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:55566/devtools/browser/589f51ad-b1f8-4f96-9ba3-b68374881739
+1642921573784	Marionette	INFO	Listening on port 55575
+1642921574160	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1642921849065	Marionette	INFO	Stopped listening on port 55575
+JavaScript error: https://banggia.hnx.vn/Scripts/PriceHNX.js?v=3.7, line 577: NS_ERROR_NOT_INITIALIZED: 
+
+###!!! [Parent][MessageChannel] Error: (msgtype=0x3A007A,name=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][MessageChannel] Error: (msgtype=0x3A0147,name=PContent::Msg_ScriptError) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+

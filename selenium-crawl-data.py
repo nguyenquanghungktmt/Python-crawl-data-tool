@@ -15,7 +15,7 @@ import pandas as pd
 import logging, logging.handlers
 import datetime
 import connection_utils
-  
+    
 
 # declare logging
 logging.basicConfig(level=logging.DEBUG, filename="./logs/log-crawl-data.log", format='%(asctime)s %(levelname)s:%(message)s')
